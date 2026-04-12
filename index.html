@@ -3,47 +3,544 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pintor en Suiza</title>
+    <title>Ginda | Malerarbeiten in Luzern, Zürich, Zug und Aargau</title>
     <meta
       name="description"
-      content="Servicios profesionales de pintura interior y exterior en Suiza."
+      content="Ginda bietet professionelle Malerarbeiten für Innen- und Außenbereiche in Luzern, Zürich, Zug und Aargau. Interior, exterior, decoration and restoration services."
     />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>Pintor profesional en Suiza</h1>
-        <p>Trabajos de pintura limpios, cuidados y de confianza.</p>
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/41783349408"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+    >
+      <span>WhatsApp</span>
+    </a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand">
+          <div class="brand-logo">
+            <img src="/logo-ginda.jpg" alt="Ginda Logo" />
+          </div>
+          <div class="brand-text">
+            <strong>Ginda</strong>
+            <span data-i18n="brandTagline">Malerarbeiten mit Sorgfalt</span>
+          </div>
+        </a>
+
+        <div class="header-actions">
+          <div class="lang-switch" aria-label="Language switcher">
+            <button class="lang-btn active" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+
+          <button
+            class="menu-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <nav class="nav">
+          <a href="#services" data-i18n="navServices">Leistungen</a>
+          <a href="#why-us" data-i18n="navWhy">Warum wir</a>
+          <a href="#projects" data-i18n="navProjects">Projekte</a>
+          <a href="#reviews" data-i18n="navReviews">Bewertungen</a>
+          <a href="#about" data-i18n="navAbout">Über uns</a>
+          <a href="#contact" class="btn btn-nav" data-i18n="navContact"
+            >Kontakt</a
+          >
+        </nav>
       </div>
     </header>
 
-    <main>
-      <section id="servicios">
-        <div class="container">
-          <h2>Servicios</h2>
-          <p>Aquí irán los servicios.</p>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg hero-bg-1"></div>
+        <div class="hero-bg hero-bg-2"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow" data-i18n="heroEyebrow">
+              Ginda | Luzern, Zürich, Zug, Aargau
+            </p>
+            <h1 data-i18n="heroTitle">
+              Professionelle Malerarbeiten für Innen- und Außenbereiche
+            </h1>
+            <p class="hero-text" data-i18n="heroText">
+              Saubere Arbeit, präzise Ausführung und persönliche Betreuung für
+              Wohnungen, Häuser, Büros und Geschäftsräume.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary" data-i18n="heroCta1">
+                Offerte anfragen
+              </a>
+              <a
+                href="#projects"
+                class="btn btn-secondary"
+                data-i18n="heroCta2"
+              >
+                Projekte ansehen
+              </a>
+            </div>
+
+            <ul class="hero-points">
+              <li data-i18n="heroPoint1">19 Jahre Erfahrung</li>
+              <li data-i18n="heroPoint2">
+                Innen, Außen, Dekoration und Restaurierung
+              </li>
+              <li data-i18n="heroPoint3">
+                Einsatzgebiet: Luzern, Zürich, Zug und Aargau
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card">
+              <div class="hero-logo-space">
+                <img src="/logo-ginda.jpg" alt="Ginda Logo" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="proyectos">
+      <section id="services" class="section">
         <div class="container">
-          <h2>Trabajos realizados</h2>
-          <p>Aquí irán los proyectos.</p>
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="servicesEyebrow">Leistungen</p>
+            <h2 data-i18n="servicesTitle">Was wir für Sie übernehmen</h2>
+            <p data-i18n="servicesText">
+              Professionelle Lösungen für Wohnräume, Fassaden, Büros und
+              gewerbliche Objekte.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">🎨</div>
+              <h3 data-i18n="service1Title">Innenanstrich</h3>
+              <p data-i18n="service1Text">
+                Wände, Decken, Türen, Fenster und Innenräume mit sauberem und
+                langlebigem Finish.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🏠</div>
+              <h3 data-i18n="service2Title">Außenanstrich</h3>
+              <p data-i18n="service2Text">
+                Fassaden und Außenflächen mit widerstandsfähigen Materialien und
+                sorgfältiger Vorbereitung.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🖌️</div>
+              <h3 data-i18n="service3Title">Dekoration und Farbberatung</h3>
+              <p data-i18n="service3Text">
+                Unterstützung bei der Wahl von Farben, Stil und Gestaltung für
+                ein harmonisches Ergebnis.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🛠️</div>
+              <h3 data-i18n="service4Title">Restaurierung und Reparatur</h3>
+              <p data-i18n="service4Text">
+                Instandsetzung und Erneuerung gestrichener Flächen mit Fokus auf
+                saubere Details.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🪵</div>
+              <h3 data-i18n="service5Title">Möbel, Türen und Fenster</h3>
+              <p data-i18n="service5Text">
+                Lackierung und Aufarbeitung von Oberflächen im Innen- und
+                Außenbereich.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">✨</div>
+              <h3 data-i18n="service6Title">Saubere und präzise Ausführung</h3>
+              <p data-i18n="service6Text">
+                Schutz von Böden und Möbeln sowie ein ordentlicher Ablauf von
+                Anfang bis Ende.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="sobre-mi">
+      <section id="why-us" class="section section-alt">
         <div class="container">
-          <h2>Sobre nosotros</h2>
-          <p>Aquí irá la presentación del pintor.</p>
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="whyEyebrow">Warum Ginda</p>
+            <h2 data-i18n="whyTitle">
+              Zuverlässigkeit, Erfahrung und Liebe zum Detail
+            </h2>
+            <p data-i18n="whyText">
+              Unser Anspruch ist nicht nur Farbe aufzutragen, sondern Räume
+              sichtbar aufzuwerten.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card">
+              <h3 data-i18n="why1Title">19 Jahre Erfahrung</h3>
+              <p data-i18n="why1Text">
+                Fundierte Praxis in Malerarbeiten, Dekoration und Restaurierung.
+              </p>
+            </article>
+
+            <article class="why-card">
+              <h3 data-i18n="why2Title">Direkte Kommunikation</h3>
+              <p data-i18n="why2Text">
+                Klare Absprachen, ehrliche Beratung und persönlicher Kontakt.
+              </p>
+            </article>
+
+            <article class="why-card">
+              <h3 data-i18n="why3Title">Saubere Arbeit</h3>
+              <p data-i18n="why3Text">
+                Schutz der Flächen und sorgfältige Ausführung mit
+                professionellem Anspruch.
+              </p>
+            </article>
+
+            <article class="why-card">
+              <h3 data-i18n="why4Title">Regionale Nähe</h3>
+              <p data-i18n="why4Text">
+                Einsatz in Luzern, Zürich, Zug und Aargau mit flexibler
+                Betreuung.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="contacto">
+      <section id="projects" class="section">
         <div class="container">
-          <h2>Contacto</h2>
-          <p>Aquí irán teléfono, email y formulario.</p>
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="projectsEyebrow">Projekte</p>
+            <h2 data-i18n="projectsTitle">Einblick in unsere Arbeiten</h2>
+            <p data-i18n="projectsText">
+              Hier kannst du später echte Fotos pro Projekt einfügen. Bis dahin
+              sind Beispielbilder eingebaut.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-viewer" data-project="0">
+                <img
+                  class="project-main-image"
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+                  alt="Projekt 1"
+                />
+              </div>
+              <div class="project-content">
+                <h3 data-i18n="project1Title">Wohnung Innenanstrich</h3>
+                <p data-i18n="project1Text">
+                  Beispielprojekt für Wände und Decken mit modernem, sauberem
+                  Finish.
+                </p>
+              </div>
+              <div class="project-thumbs" data-project-thumbs="0">
+                <button
+                  class="thumb active"
+                  data-image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 1"
+                  />
+                </button>
+                <button
+                  class="thumb"
+                  data-image="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 2"
+                  />
+                </button>
+                <button
+                  class="thumb"
+                  data-image="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 3"
+                  />
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-viewer" data-project="1">
+                <img
+                  class="project-main-image"
+                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+                  alt="Projekt 2"
+                />
+              </div>
+              <div class="project-content">
+                <h3 data-i18n="project2Title">Büro oder Geschäftsraum</h3>
+                <p data-i18n="project2Text">
+                  Beispiel für professionelle Farbgestaltung in Arbeits- und
+                  Geschäftsräumen.
+                </p>
+              </div>
+              <div class="project-thumbs" data-project-thumbs="1">
+                <button
+                  class="thumb active"
+                  data-image="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 1"
+                  />
+                </button>
+                <button
+                  class="thumb"
+                  data-image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 2"
+                  />
+                </button>
+                <button
+                  class="thumb"
+                  data-image="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 3"
+                  />
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-viewer" data-project="2">
+                <img
+                  class="project-main-image"
+                  src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
+                  alt="Projekt 3"
+                />
+              </div>
+              <div class="project-content">
+                <h3 data-i18n="project3Title">Fassade und Außenbereich</h3>
+                <p data-i18n="project3Text">
+                  Beispiel für Außenarbeiten mit Vorbereitung, Schutz und
+                  widerstandsfähigem Ergebnis.
+                </p>
+              </div>
+              <div class="project-thumbs" data-project-thumbs="2">
+                <button
+                  class="thumb active"
+                  data-image="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 1"
+                  />
+                </button>
+                <button
+                  class="thumb"
+                  data-image="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 2"
+                  />
+                </button>
+                <button
+                  class="thumb"
+                  data-image="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=1200&q=80"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=400&q=80"
+                    alt="thumb 3"
+                  />
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="reviewsEyebrow">Bewertungen</p>
+            <h2 data-i18n="reviewsTitle">Was Kunden über Ginda sagen</h2>
+            <p data-i18n="reviewsText">
+              Platzhaltertexte, die du später durch echte Kundenmeinungen
+              ersetzen kannst.
+            </p>
+          </div>
+
+          <div class="reviews-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p data-i18n="review1Text">
+                Sehr saubere Arbeit, pünktlich und professionell. Das Ergebnis
+                hat uns wirklich überzeugt.
+              </p>
+              <span data-i18n="review1Name">Privatkunde</span>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p data-i18n="review2Text">
+                Gute Beratung bei Farben und ein sehr ordentliches Finish.
+                Würden wir wieder wählen.
+              </p>
+              <span data-i18n="review2Name">Bürokunde</span>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p data-i18n="review3Text">
+                Freundlicher Kontakt, klare Kommunikation und ein hochwertiges
+                Resultat.
+              </p>
+              <span data-i18n="review3Name">Hausbesitzer</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <div class="about-card">
+            <p class="eyebrow" data-i18n="aboutEyebrow">Über Petrica</p>
+            <h2 data-i18n="aboutTitle">
+              Erfahrung, Leidenschaft und handwerkliche Präzision
+            </h2>
+            <p data-i18n="aboutText1">
+              Hallo, ich bin Petrica, ausgebildeter Maler mit 19 Jahren
+              Erfahrung in der Branche. Ich arbeite mit Leidenschaft daran,
+              Räume und Oberflächen sichtbar aufzuwerten.
+            </p>
+            <p data-i18n="aboutText2">
+              Ich bin spezialisiert auf glatte und saubere Arbeiten an Wänden,
+              Decken, Möbeln, Türen, Fenstern und Fassaden sowie auf dekorative
+              und restaurative Lösungen.
+            </p>
+            <div class="about-badges">
+              <span data-i18n="aboutBadge1">19 Jahre Erfahrung</span>
+              <span data-i18n="aboutBadge2">Innen und Außen</span>
+              <span data-i18n="aboutBadge3">Dekoration und Restaurierung</span>
+            </div>
+          </div>
+
+          <div class="about-visual">
+            <div class="about-logo-box">
+              <img src="/logo-ginda.jpg" alt="Ginda Logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="contactEyebrow">Kontakt</p>
+            <h2 data-i18n="contactTitle">
+              Fragen Sie unverbindlich eine Offerte an
+            </h2>
+            <p data-i18n="contactText">
+              Schreiben Sie uns oder kontaktieren Sie uns direkt per Telefon
+              oder WhatsApp.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3 data-i18n="contactInfoTitle">Kontaktinformationen</h3>
+              <ul class="contact-list">
+                <li>
+                  <strong data-i18n="contactPhoneLabel">Telefon:</strong>
+                  <a href="tel:+41783349408">+41 78 334 94 08</a>
+                </li>
+                <li>
+                  <strong>Email:</strong>
+                  <a href="mailto:info@ginda.ch">info@ginda.ch</a>
+                </li>
+                <li>
+                  <strong data-i18n="contactAreaLabel">Einsatzgebiet:</strong>
+                  <span data-i18n="contactAreaValue"
+                    >Luzern, Zürich, Zug und Aargau</span
+                  >
+                </li>
+                <li>
+                  <strong>WhatsApp:</strong>
+                  <a
+                    href="https://wa.me/41783349408"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    +41 78 334 94 08
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <form
+              class="contact-form"
+              action="mailto:info@ginda.ch"
+              method="post"
+              enctype="text/plain"
+            >
+              <input
+                type="text"
+                name="name"
+                data-placeholder="contactName"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                name="email"
+                data-placeholder="contactEmail"
+                placeholder="E-Mail"
+              />
+              <input
+                type="text"
+                name="phone"
+                data-placeholder="contactPhone"
+                placeholder="Telefon"
+              />
+              <textarea
+                name="message"
+                data-placeholder="contactMessage"
+                placeholder="Beschreiben Sie kurz Ihr Projekt"
+              ></textarea>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                data-i18n="contactBtn"
+              >
+                Nachricht senden
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
