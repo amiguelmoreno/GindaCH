@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ginda | Malerarbeiten in Luzern, Zürich, Zug und Aargau</title>
+    <title>GINDA | Malerarbeiten in Luzern, Zürich, Zug und Aargau</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=M+PLUS+Rounded+1c:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
     <meta
       name="description"
       content="Ginda bietet professionelle Malerarbeiten für Innen- und Außenbereiche in Luzern, Zürich, Zug und Aargau. Interior, exterior, decoration and restoration services."
@@ -41,7 +47,7 @@
             <img src="/logo-ginda.jpg" alt="Ginda Logo" />
           </div>
           <div class="brand-text">
-            <strong>Ginda</strong>
+            <strong>GINDA</strong>
             <span data-i18n="brandTagline">Malerarbeiten mit Sorgfalt</span>
           </div>
         </a>
@@ -80,56 +86,38 @@
       <div class="projects-marquee__track">
         <div class="projects-marquee__group">
           <img
-            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-            alt="Proyecto 1"
+            src="/carrousel/carousel-1-exterior-modern.jpg"
+            alt="Proyecto exterior moderno"
           />
           <img
-            src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80"
-            alt="Proyecto 2"
+            src="/carrousel/carousel-2-bedroom-white.jpg"
+            alt="Dormitorio blanco"
           />
           <img
-            src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
-            alt="Proyecto 3"
+            src="/carrousel/carousel-3-showroom-wide.jpg"
+            alt="Showroom amplio"
           />
           <img
-            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
-            alt="Proyecto 4"
+            src="/carrousel/carousel-4-byd-wall.jpg"
+            alt="Pared decorativa BYD"
           />
           <img
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
-            alt="Proyecto 5"
+            src="/carrousel/carousel-5-exterior-classic.jpg"
+            alt="Casa exterior clásica"
           />
           <img
-            src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
-            alt="Proyecto 6"
+            src="/carrousel/carousel-6-showroom-lounge.jpg"
+            alt="Zona lounge showroom"
           />
         </div>
 
         <div class="projects-marquee__group" aria-hidden="true">
-          <img
-            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
-            alt=""
-          />
+          <img src="/carrousel/carousel-1-exterior-modern.jpg" alt="" />
+          <img src="/carrousel/carousel-2-bedroom-white.jpg" alt="" />
+          <img src="/carrousel/carousel-3-showroom-wide.jpg" alt="" />
+          <img src="/carrousel/carousel-4-byd-wall.jpg" alt="" />
+          <img src="/carrousel/carousel-5-exterior-classic.jpg" alt="" />
+          <img src="/carrousel/carousel-6-showroom-lounge.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -138,8 +126,8 @@
         <div class="hero-bg hero-bg-1"></div>
         <div class="hero-bg hero-bg-2"></div>
 
-        <div class="container hero-grid">
-          <div class="hero-content">
+        <div class="container hero-grid hero-grid--full">
+          <div class="hero-content hero-content--full">
             <p class="eyebrow" data-i18n="heroEyebrow">
               Ginda | Luzern, Zürich, Zug, Aargau
             </p>
@@ -174,14 +162,6 @@
               </li>
             </ul>
           </div>
-
-          <div class="hero-visual">
-            <div class="hero-card">
-              <div class="hero-logo-space">
-                <img src="/logo-ginda.jpg" alt="Ginda Logo" />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -199,56 +179,70 @@
           <div class="services-grid">
             <article class="service-card">
               <div class="service-icon">🎨</div>
-              <h3 data-i18n="service1Title">Innenanstrich</h3>
-              <p data-i18n="service1Text">
-                Wände, Decken, Türen, Fenster und Innenräume mit sauberem und
-                langlebigem Finish.
-              </p>
+              <div class="service-card__content">
+                <h3 data-i18n="service1Title">Innenanstrich</h3>
+                <p data-i18n="service1Text">
+                  Wände, Decken, Türen, Fenster und Innenräume mit sauberem und
+                  langlebigem Finish.
+                </p>
+              </div>
             </article>
 
             <article class="service-card">
               <div class="service-icon">🏠</div>
-              <h3 data-i18n="service2Title">Außenanstrich</h3>
-              <p data-i18n="service2Text">
-                Fassaden und Außenflächen mit widerstandsfähigen Materialien und
-                sorgfältiger Vorbereitung.
-              </p>
+              <div class="service-card__content">
+                <h3 data-i18n="service2Title">Außenanstrich</h3>
+                <p data-i18n="service2Text">
+                  Fassaden und Außenflächen mit widerstandsfähigen Materialien
+                  und sorgfältiger Vorbereitung.
+                </p>
+              </div>
             </article>
 
             <article class="service-card">
               <div class="service-icon">🖌️</div>
-              <h3 data-i18n="service3Title">Dekoration und Farbberatung</h3>
-              <p data-i18n="service3Text">
-                Unterstützung bei der Wahl von Farben, Stil und Gestaltung für
-                ein harmonisches Ergebnis.
-              </p>
+              <div class="service-card__content">
+                <h3 data-i18n="service3Title">Dekoration und Farbberatung</h3>
+                <p data-i18n="service3Text">
+                  Unterstützung bei der Wahl von Farben, Stil und Gestaltung für
+                  ein harmonisches Ergebnis.
+                </p>
+              </div>
             </article>
 
             <article class="service-card">
               <div class="service-icon">🛠️</div>
-              <h3 data-i18n="service4Title">Restaurierung und Reparatur</h3>
-              <p data-i18n="service4Text">
-                Instandsetzung und Erneuerung gestrichener Flächen mit Fokus auf
-                saubere Details.
-              </p>
+              <div class="service-card__content">
+                <h3 data-i18n="service4Title">Restaurierung und Reparatur</h3>
+                <p data-i18n="service4Text">
+                  Instandsetzung und Erneuerung gestrichener Flächen mit Fokus
+                  auf saubere Details.
+                </p>
+              </div>
             </article>
 
             <article class="service-card">
               <div class="service-icon">🪵</div>
-              <h3 data-i18n="service5Title">Möbel, Türen und Fenster</h3>
-              <p data-i18n="service5Text">
-                Lackierung und Aufarbeitung von Oberflächen im Innen- und
-                Außenbereich.
-              </p>
+              <div class="service-card__content">
+                <h3 data-i18n="service5Title">Möbel, Türen und Fenster</h3>
+                <p data-i18n="service5Text">
+                  Lackierung und Aufarbeitung von Oberflächen im Innen- und
+                  Außenbereich.
+                </p>
+              </div>
             </article>
 
             <article class="service-card">
               <div class="service-icon">✨</div>
-              <h3 data-i18n="service6Title">Saubere und präzise Ausführung</h3>
-              <p data-i18n="service6Text">
-                Schutz von Böden und Möbeln sowie ein ordentlicher Ablauf von
-                Anfang bis Ende.
-              </p>
+              <div class="service-card__content">
+                <h3 data-i18n="service6Title">
+                  Saubere und präzise Ausführung
+                </h3>
+                <p data-i18n="service6Text">
+                  Schutz von Böden und Möbeln sowie ein ordentlicher Ablauf von
+                  Anfang bis Ende.
+                </p>
+              </div>
             </article>
           </div>
         </div>
@@ -317,43 +311,43 @@
               <div class="project-viewer" data-project="0">
                 <img
                   class="project-main-image"
-                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-                  alt="Projekt 1"
+                  src="/beispiel/example-1-house-classic.jpg"
+                  alt="Fachada proyecto 1"
                 />
               </div>
               <div class="project-content">
-                <h3 data-i18n="project1Title">Wohnung Innenanstrich</h3>
-                <p data-i18n="project1Text">
-                  Beispielprojekt für Wände und Decken mit modernem, sauberem
-                  Finish.
+                <h3 data-i18n="project3Title">Fassade und Außenbereich</h3>
+                <p data-i18n="project3Text">
+                  Beispiel für Außenarbeiten mit Vorbereitung, Schutz und
+                  widerstandsfähigem Ergebnis.
                 </p>
               </div>
               <div class="project-thumbs" data-project-thumbs="0">
                 <button
                   class="thumb active"
-                  data-image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-1-house-classic.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 1"
+                    src="/beispiel/example-1-house-classic.jpg"
+                    alt="Fachada thumb 1"
                   />
                 </button>
                 <button
                   class="thumb"
-                  data-image="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-8-garage-red.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 2"
+                    src="/beispiel/example-8-garage-red.jpg"
+                    alt="Fachada thumb 2"
                   />
                 </button>
                 <button
                   class="thumb"
-                  data-image="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-2-house-modern.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 3"
+                    src="/beispiel/example-2-house-modern.jpg"
+                    alt="Fachada thumb 3"
                   />
                 </button>
               </div>
@@ -363,8 +357,8 @@
               <div class="project-viewer" data-project="1">
                 <img
                   class="project-main-image"
-                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Projekt 2"
+                  src="/beispiel/example-3-showroom-lounge.jpg"
+                  alt="Büro proyecto 1"
                 />
               </div>
               <div class="project-content">
@@ -377,29 +371,29 @@
               <div class="project-thumbs" data-project-thumbs="1">
                 <button
                   class="thumb active"
-                  data-image="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-3-showroom-lounge.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 1"
+                    src="/beispiel/example-3-showroom-lounge.jpg"
+                    alt="Büro thumb 1"
                   />
                 </button>
                 <button
                   class="thumb"
-                  data-image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-5-showroom-wide.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 2"
+                    src="/beispiel/example-5-showroom-wide.jpg"
+                    alt="Büro thumb 2"
                   />
                 </button>
                 <button
                   class="thumb"
-                  data-image="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-6-byd-wall.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 3"
+                    src="/beispiel/example-6-byd-wall.jpg"
+                    alt="Büro thumb 3"
                   />
                 </button>
               </div>
@@ -409,43 +403,43 @@
               <div class="project-viewer" data-project="2">
                 <img
                   class="project-main-image"
-                  src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
-                  alt="Projekt 3"
+                  src="/beispiel/example-4-bedroom-white.jpg"
+                  alt="Interior proyecto 1"
                 />
               </div>
               <div class="project-content">
-                <h3 data-i18n="project3Title">Fassade und Außenbereich</h3>
-                <p data-i18n="project3Text">
-                  Beispiel für Außenarbeiten mit Vorbereitung, Schutz und
-                  widerstandsfähigem Ergebnis.
+                <h3 data-i18n="project1Title">Wohnung Innenanstrich</h3>
+                <p data-i18n="project1Text">
+                  Beispielprojekt für Wände und Decken mit modernem, sauberem
+                  Finish.
                 </p>
               </div>
               <div class="project-thumbs" data-project-thumbs="2">
                 <button
                   class="thumb active"
-                  data-image="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-4-bedroom-white.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 1"
+                    src="/beispiel/example-4-bedroom-white.jpg"
+                    alt="Interior thumb 1"
                   />
                 </button>
                 <button
                   class="thumb"
-                  data-image="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-7-kitchen-blue.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 2"
+                    src="/beispiel/example-7-kitchen-blue.jpg"
+                    alt="Interior thumb 2"
                   />
                 </button>
                 <button
                   class="thumb"
-                  data-image="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=1200&q=80"
+                  data-image="/beispiel/example-9-living-dark.jpg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=400&q=80"
-                    alt="thumb 3"
+                    src="/beispiel/example-9-living-dark.jpg"
+                    alt="Interior thumb 3"
                   />
                 </button>
               </div>
@@ -584,23 +578,29 @@
                 name="name"
                 data-placeholder="contactName"
                 placeholder="Name"
+                required
               />
               <input
                 type="email"
                 name="email"
                 data-placeholder="contactEmail"
                 placeholder="E-Mail"
+                required
               />
               <input
                 type="text"
                 name="phone"
                 data-placeholder="contactPhone"
                 placeholder="Telefon"
+                required
               />
               <textarea
                 name="message"
                 data-placeholder="contactMessage"
                 placeholder="Beschreiben Sie kurz Ihr Projekt"
+                required
+                minlength="20"
+                maxlength="1000"
               ></textarea>
               <button
                 type="submit"
@@ -614,5 +614,15 @@
         </div>
       </section>
     </main>
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Cerrar imagen"
+      >
+        ×
+      </button>
+      <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+    </div>
   </body>
 </html>
