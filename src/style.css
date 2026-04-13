@@ -1009,3 +1009,70 @@ section {
     font-size: 0.92rem;
   }
 }
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(102, 181, 255, 0.22),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(44, 40, 185, 0.18),
+      transparent 34%
+    ),
+    linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition:
+    transform 0.9s cubic-bezier(0.77, 0, 0.175, 1),
+    opacity 0.45s ease,
+    visibility 0.45s ease;
+}
+
+.intro-overlay.is-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intro-overlay__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.intro-overlay__logo {
+  width: min(380px, 62vw);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgba(29, 21, 143, 0.14));
+  animation: introLogoPulse 1.2s ease;
+}
+
+@keyframes introLogoPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+body.intro-lock {
+  overflow: hidden;
+}
+html {
+  overflow-y: scroll;
+}

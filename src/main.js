@@ -454,3 +454,16 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+const introOverlay = document.getElementById("introOverlay");
+
+if (introOverlay) {
+  document.body.classList.add("intro-lock");
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      introOverlay.classList.add("is-hidden");
+      document.body.classList.remove("intro-lock");
+    }, 1400);
+  });
+}
