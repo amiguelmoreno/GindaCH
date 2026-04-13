@@ -90,6 +90,12 @@ section {
   position: relative;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -968,18 +974,6 @@ section {
     position: sticky;
   }
 
-  .header-inner {
-    min-height: 78px;
-  }
-
-  .brand-text span {
-    display: none;
-  }
-
-  .lang-switch {
-    display: none;
-  }
-
   .hero {
     padding-top: 64px;
   }
@@ -995,6 +989,9 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .brand-text span {
+    display: none;
+  }
   .project-thumbs {
     overflow-x: auto;
     padding-bottom: 22px;
