@@ -467,3 +467,31 @@ if (introOverlay) {
     }, 1400);
   });
 }
+
+const form = document.getElementById("contact-form");
+
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const response = await fetch("https://formspree.io/f/xwvarvvd", {
+    method: "POST",
+
+    body: data,
+
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  if (response.ok) {
+    status.innerHTML = "✅ Danke! Ihre Nachricht wurde gesendet.";
+
+    form.reset();
+  } else {
+    status.innerHTML = "❌ Fehler. Bitte versuchen Sie es erneut.";
+  }
+});

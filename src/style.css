@@ -337,6 +337,16 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: -1; /* la imagen arriba */
+  }
+}
+
 @media (max-width: 900px) {
   .projects-marquee__group img {
     width: 260px;
@@ -393,6 +403,28 @@ section {
   left: -100px;
   bottom: -120px;
   background: rgba(44, 40, 185, 0.14);
+}
+
+.hero-grid {
+  display: grid;
+
+  grid-template-columns: 1.2fr 1fr;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+.hero-image img {
+  width: 100%;
+
+  height: auto;
+
+  border-radius: 16px;
+
+  object-fit: cover;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .hero-grid--full {
@@ -697,9 +729,10 @@ section {
 .about-logo-box {
   min-height: 100%;
   display: flex;
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
-  padding: 32px;
+
   background:
     radial-gradient(
       circle at top right,

@@ -49,7 +49,7 @@
     </div>
     <a
       class="whatsapp-float"
-      href="https://wa.me/41783349408"
+      href="https://wa.me/41783349408?text=Hallo,%20ich%20interessiere%20mich%20für%20Malerarbeiten.%20Können%20Sie%20mir%20eine%20Offerte%20machen?"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"
@@ -155,41 +155,39 @@
         <div class="hero-bg hero-bg-1"></div>
         <div class="hero-bg hero-bg-2"></div>
 
-        <div class="container hero-grid hero-grid--full">
-          <div class="hero-content hero-content--full">
+        <div class="container hero-grid">
+          <!-- TEXTO -->
+          <div class="hero-content">
             <p class="eyebrow" data-i18n="heroEyebrow">
               Ginda | Luzern, Zürich, Zug, Aargau
             </p>
+
             <h1 data-i18n="heroTitle">
               Professionelle Malerarbeiten für Innen- und Außenbereiche
             </h1>
+
             <p class="hero-text" data-i18n="heroText">
               Saubere Arbeit, präzise Ausführung und persönliche Betreuung für
               Wohnungen, Häuser, Büros und Geschäftsräume.
             </p>
 
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary" data-i18n="heroCta1">
-                Offerte anfragen
-              </a>
-              <a
-                href="#projects"
-                class="btn btn-secondary"
-                data-i18n="heroCta2"
-              >
+              <a href="#contact" class="btn btn-primary"> Offerte anfragen </a>
+              <a href="#projects" class="btn btn-secondary">
                 Projekte ansehen
               </a>
             </div>
 
             <ul class="hero-points">
-              <li data-i18n="heroPoint1">19 Jahre Erfahrung</li>
-              <li data-i18n="heroPoint2">
-                Innen, Außen, Dekoration und Restaurierung
-              </li>
-              <li data-i18n="heroPoint3">
-                Einsatzgebiet: Luzern, Zürich, Zug und Aargau
-              </li>
+              <li>19 Jahre Erfahrung</li>
+              <li>Innen, Außen, Dekoration und Restaurierung</li>
+              <li>Einsatzgebiet: Luzern, Zürich, Zug und Aargau</li>
             </ul>
+          </div>
+
+          <!-- IMAGEN -->
+          <div class="hero-image">
+            <img src="/coche-petrica.png" alt="Maler bei der Arbeit" />
           </div>
         </div>
       </section>
@@ -843,7 +841,7 @@
 
           <div class="about-visual">
             <div class="about-logo-box">
-              <img src="/petrica.jpg" alt="Ginda Logo" />
+              <img src="/petrica.png" alt="Ginda Logo" />
             </div>
           </div>
         </div>
@@ -883,7 +881,7 @@
                 <li>
                   <strong>WhatsApp:</strong>
                   <a
-                    href="https://wa.me/41783349408"
+                    href="https://wa.me/41783349408?text=Hallo,%20ich%20interessiere%20mich%20für%20Malerarbeiten.%20Können%20Sie%20mir%20eine%20Offerte%20machen?"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -894,10 +892,10 @@
             </div>
 
             <form
+              id="contact-form"
               class="contact-form"
-              action="mailto:info@ginda.ch"
-              method="post"
-              enctype="text/plain"
+              action="https://formspree.io/f/xwvarvvd"
+              method="POST"
             >
               <input
                 type="text"
@@ -935,6 +933,12 @@
               >
                 Nachricht senden
               </button>
+              <input
+                type="hidden"
+                name="_subject"
+                value="New contact from website"
+              />
+              <p id="form-status"></p>
             </form>
           </div>
         </div>
