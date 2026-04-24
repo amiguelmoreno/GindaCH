@@ -110,6 +110,23 @@ const translations = {
     contactPhone: "Telefon",
     contactMessage: "Beschreiben Sie kurz Ihr Projekt",
     contactBtn: "Nachricht senden",
+
+    navFaq: "FAQ",
+    faqEyebrow: "Häufige Fragen",
+    faqTitle: "Antworten auf Ihre Fragen",
+    faqText: "Wir beantworten die wichtigsten Fragen rund um unsere Leistungen, Offerten und Arbeitsweise.",
+    faq1Q: "Bieten Sie einen Komplettservice für Mieterwechsel an?",
+    faq1A: "Ja, wir bieten einen Gesamtservice speziell für Mieterwechsel an. Dieser umfasst Malerarbeiten in der gesamten Wohnung, kleinere Ausbesserungsarbeiten mit Gips an den betroffenen Stellen sowie eine professionelle Endreinigung – damit die Wohnung vollständig vorbereitet für den nächsten Mieter übergeben werden kann. Der Preis wird individuell festgelegt und richtet sich nach dem Zustand und den Anforderungen der Wohnung.",
+    faq2Q: "Wie erhalte ich eine Offerte? Gibt es einen Besichtigungstermin?",
+    faq2A: "Wir erstellen Offerten grundsätzlich ohne jegliche Verpflichtung. Für ein genaues und realistisches Angebot bevorzugen wir jedoch einen kurzen Besichtigungstermin vor Ort – nur so können wir den tatsächlichen Aufwand richtig einschätzen und Ihnen einen verlässlichen Preis nennen. Kontaktieren Sie uns einfach und wir vereinbaren gemeinsam einen passenden Termin.",
+    faq3Q: "Welche Leistungen bieten Sie genau an?",
+    faq3A: "Unser Schwerpunkt liegt auf professionellen Malerarbeiten im Innen- und Außenbereich: Wände, Decken, Türen, Fenster und Fassaden sowie Dekorationsarbeiten und Restaurierungen. Auf Anfrage übernehmen wir ergänzend auch Endreinigungen, Fensterreinigung und kleinere Reparaturen im Haus – alles aus einer Hand.",
+    faq4Q: "In welchen Regionen sind Sie tätig?",
+    faq4A: "Wir sind hauptsächlich in den Kantonen Luzern, Zürich, Zug und Aargau tätig. Bei größeren Projekten sind wir auch in anderen Regionen tätig – sprechen Sie uns einfach an.",
+    faq5Q: "Wie lange dauert ein typisches Malprojekt?",
+    faq5A: "Das hängt vom Umfang der Arbeiten ab. Eine Wohnung dauert in der Regel einige Tage, größere Renovations- oder Fassadenarbeiten können mehr Zeit in Anspruch nehmen. Nach der Besichtigung geben wir Ihnen eine konkrete Einschätzung.",
+    faq6Q: "Arbeiten Sie auch für Büros und Gewerbeobjekte?",
+    faq6A: "Ja, wir übernehmen Projekte in Büros, Ladenlokalen, Showrooms und anderen gewerblichen Liegenschaften. Wir passen uns dem Zeitplan Ihres Unternehmens an und können bei Bedarf auch außerhalb der regulären Geschäftszeiten arbeiten.",
   },
 
   es: {
@@ -219,6 +236,23 @@ const translations = {
     contactPhone: "Teléfono",
     contactMessage: "Describe brevemente tu proyecto",
     contactBtn: "Enviar mensaje",
+
+    navFaq: "FAQ",
+    faqEyebrow: "Preguntas frecuentes",
+    faqTitle: "Respuestas a tus dudas",
+    faqText: "Respondemos las preguntas más habituales sobre nuestros servicios, presupuestos y forma de trabajar.",
+    faq1Q: "¿Ofrecéis un servicio completo para cambios de inquilino?",
+    faq1A: "Sí, ofrecemos un servicio integral pensado especialmente para cambios de inquilino. Este incluye trabajos de pintura en toda la vivienda, pequeños arreglos con yeso en las zonas que lo necesiten y una limpieza final profesional, de modo que el piso quede completamente preparado para el siguiente inquilino. El presupuesto es personalizado y se determina según el estado y las necesidades concretas de la vivienda.",
+    faq2Q: "¿Cómo funciona el presupuesto? ¿Hacéis una visita previa?",
+    faq2A: "Ofrecemos presupuestos totalmente sin compromiso. Para poder darte un precio exacto y ajustado a tu situación, preferimos hacer una visita previa a la vivienda o local — solo así podemos valorar bien el trabajo y darte una cifra realista. Contáctanos y acordamos una cita que te venga bien.",
+    faq3Q: "¿Qué servicios ofrecéis exactamente?",
+    faq3A: "Nos especializamos en trabajos de pintura tanto en interiores como en exteriores: paredes, techos, puertas, ventanas, fachadas, trabajos decorativos y restauraciones. Bajo solicitud, también realizamos limpiezas finales, limpieza de ventanas y pequeñas reparaciones en el hogar, todo en un mismo servicio.",
+    faq4Q: "¿En qué zonas trabajáis?",
+    faq4A: "Trabajamos principalmente en los cantones de Lucerna, Zúrich, Zug y Argovia. Para proyectos de mayor envergadura también podemos desplazarnos a otras zonas, consúltanos.",
+    faq5Q: "¿Cuánto tiempo dura un trabajo de pintura habitual?",
+    faq5A: "Depende del alcance de los trabajos. Una vivienda normalmente lleva unos pocos días; para renovaciones más amplias o trabajos en fachadas el tiempo puede ser mayor. Tras la visita te daremos una estimación concreta.",
+    faq6Q: "¿Trabajáis también con oficinas y locales comerciales?",
+    faq6A: "Sí, realizamos proyectos en oficinas, tiendas, showrooms y otras propiedades comerciales. Nos adaptamos al horario de tu empresa y, si es necesario, podemos trabajar fuera del horario habitual de negocio.",
   },
 
   en: {
@@ -329,6 +363,23 @@ const translations = {
     contactPhone: "Phone",
     contactMessage: "Briefly describe your project",
     contactBtn: "Send message",
+
+    navFaq: "FAQ",
+    faqEyebrow: "Frequently Asked Questions",
+    faqTitle: "Answers to your questions",
+    faqText: "We answer the most common questions about our services, quotes and the way we work.",
+    faq1Q: "Do you offer a complete service for tenant changes?",
+    faq1A: "Yes, we offer a complete service designed specifically for tenant changes. This includes painting throughout the entire apartment, small plasterwork repairs where needed, and a professional end-of-tenancy clean — so that the property is fully ready for the next tenant. The price is personalised and depends on the condition and specific requirements of the property.",
+    faq2Q: "How does the quote work? Is there a site visit?",
+    faq2A: "We provide quotes with no obligation whatsoever. However, to give you an accurate and realistic price, we prefer to carry out a short visit on-site — this is the only way we can properly assess the scope of work and give you a reliable figure. Just get in touch and we will arrange a convenient appointment.",
+    faq3Q: "What services do you offer exactly?",
+    faq3A: "Our core focus is professional painting for both interior and exterior spaces: walls, ceilings, doors, windows and facades, as well as decorative and restoration work. On request, we also provide end-of-tenancy cleaning, window cleaning and small household repairs — all from a single provider.",
+    faq4Q: "Which regions do you cover?",
+    faq4A: "We mainly operate in the cantons of Lucerne, Zurich, Zug and Aargau. For larger projects, we can also work in other regions — just ask us.",
+    faq5Q: "How long does a typical painting project take?",
+    faq5A: "It depends on the scope of the work. A typical apartment usually takes a few days; larger renovation or facade projects may take more time. After the site visit we will give you a concrete estimate.",
+    faq6Q: "Do you also work for offices and commercial properties?",
+    faq6A: "Yes, we take on projects in offices, shops, showrooms and other commercial properties. We adapt to your company's schedule and can work outside regular business hours if needed.",
   },
 };
 
@@ -454,6 +505,105 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+// FAQ accordion animation
+document.querySelectorAll(".faq-item").forEach((details) => {
+  const summary = details.querySelector(".faq-question");
+  const answer = details.querySelector(".faq-answer");
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (details.open) {
+      const cs = window.getComputedStyle(answer);
+      const pt = parseFloat(cs.paddingTop);
+      const pb = parseFloat(cs.paddingBottom);
+
+      answer.style.height = answer.offsetHeight + "px";
+      answer.style.paddingTop = pt + "px";
+      answer.style.paddingBottom = pb + "px";
+
+      requestAnimationFrame(() => {
+        answer.style.height = "0";
+        answer.style.paddingTop = "0";
+        answer.style.paddingBottom = "0";
+
+        const done = (ev) => {
+          if (ev.propertyName !== "height") return;
+          answer.removeEventListener("transitionend", done);
+          details.removeAttribute("open");
+          answer.style.cssText = "";
+        };
+        answer.addEventListener("transitionend", done);
+      });
+    } else {
+      details.setAttribute("open", "");
+      const cs = window.getComputedStyle(answer);
+      const pt = parseFloat(cs.paddingTop);
+      const pb = parseFloat(cs.paddingBottom);
+
+      answer.style.paddingTop = "0";
+      answer.style.paddingBottom = "0";
+      answer.style.height = "0";
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          answer.style.height = answer.scrollHeight + pt + pb + "px";
+          answer.style.paddingTop = pt + "px";
+          answer.style.paddingBottom = pb + "px";
+
+          const done = (ev) => {
+            if (ev.propertyName !== "height") return;
+            answer.removeEventListener("transitionend", done);
+            answer.style.cssText = "";
+          };
+          answer.addEventListener("transitionend", done);
+        });
+      });
+    }
+  });
+});
+
+// Scroll animations
+const animTargets = [
+  ...document.querySelectorAll(".section-heading"),
+  ...document.querySelectorAll(".service-card"),
+  ...document.querySelectorAll(".why-card"),
+  ...document.querySelectorAll(".project-card"),
+  ...document.querySelectorAll(".faq-item"),
+  ...document.querySelectorAll(".about-card"),
+  ...document.querySelectorAll(".about-visual"),
+  ...document.querySelectorAll(".contact-card"),
+  ...document.querySelectorAll(".contact-form"),
+  ...document.querySelectorAll(".services-addon"),
+  ...document.querySelectorAll(".services-group__header"),
+];
+
+document
+  .querySelectorAll(
+    ".services-grid, .why-grid, .projects-grid, .faq-list, .services-addon__grid"
+  )
+  .forEach((container) => {
+    Array.from(container.children).forEach((child, i) => {
+      child.style.transitionDelay = `${i * 0.09}s`;
+    });
+  });
+
+animTargets.forEach((el) => el.classList.add("animate-fade-up"));
+
+const scrollObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+);
+
+animTargets.forEach((el) => scrollObserver.observe(el));
 
 const introOverlay = document.getElementById("introOverlay");
 
