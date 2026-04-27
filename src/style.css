@@ -1473,3 +1473,147 @@ html {
     transition: none;
   }
 }
+
+/* ===========================
+   BEFORE / AFTER SLIDER
+   =========================== */
+
+.ba-section-head {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.ba-section-head h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.ba-section-head p {
+  color: var(--color-text-soft);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.ba-card {
+  background: #fff;
+  border: 1px solid rgba(44, 40, 185, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.ba-slider {
+  --pos: 50%;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.ba-img-after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.ba-img-before-wrap {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+.ba-img-before-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.ba-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  transform: translateX(-50%);
+  width: 3px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.35));
+}
+
+.ba-handle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  color: var(--color-primary-dark);
+}
+
+.ba-label {
+  position: absolute;
+  top: 12px;
+  background: rgba(0, 0, 0, 0.52);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  pointer-events: none;
+}
+
+.ba-label--left {
+  left: 12px;
+}
+
+.ba-label--right {
+  right: 12px;
+}
+
+.ba-card-title {
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+@media (max-width: 1080px) {
+  .ba-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ba-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-section-head {
+    margin-top: 48px;
+  }
+}

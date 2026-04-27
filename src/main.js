@@ -127,6 +127,15 @@ const translations = {
     faq5A: "Das hängt vom Umfang der Arbeiten ab. Eine Wohnung dauert in der Regel einige Tage, größere Renovations- oder Fassadenarbeiten können mehr Zeit in Anspruch nehmen. Nach der Besichtigung geben wir Ihnen eine konkrete Einschätzung.",
     faq6Q: "Arbeiten Sie auch für Büros und Gewerbeobjekte?",
     faq6A: "Ja, wir übernehmen Projekte in Büros, Ladenlokalen, Showrooms und anderen gewerblichen Liegenschaften. Wir passen uns dem Zeitplan Ihres Unternehmens an und können bei Bedarf auch außerhalb der regulären Geschäftszeiten arbeiten.",
+
+    baEyebrow: "Vorher · Nachher",
+    baTitle: "Sehen Sie den Unterschied",
+    baText: "Regler ziehen, um die Verwandlung zu entdecken.",
+    baLabelBefore: "Vorher",
+    baLabelAfter: "Nachher",
+    baProject1: "Gelbes Wohnhaus",
+    baProject2: "Große Hausfassade",
+    baProject3: "Wohnungsfassade",
   },
 
   es: {
@@ -253,6 +262,15 @@ const translations = {
     faq5A: "Depende del alcance de los trabajos. Una vivienda normalmente lleva unos pocos días; para renovaciones más amplias o trabajos en fachadas el tiempo puede ser mayor. Tras la visita te daremos una estimación concreta.",
     faq6Q: "¿Trabajáis también con oficinas y locales comerciales?",
     faq6A: "Sí, realizamos proyectos en oficinas, tiendas, showrooms y otras propiedades comerciales. Nos adaptamos al horario de tu empresa y, si es necesario, podemos trabajar fuera del horario habitual de negocio.",
+
+    baEyebrow: "Antes · Después",
+    baTitle: "Vea la diferencia",
+    baText: "Deslice el control para descubrir la transformación.",
+    baLabelBefore: "Antes",
+    baLabelAfter: "Después",
+    baProject1: "Casa Amarilla",
+    baProject2: "Fachada Casa Grande",
+    baProject3: "Fachada Piso",
   },
 
   en: {
@@ -380,6 +398,15 @@ const translations = {
     faq5A: "It depends on the scope of the work. A typical apartment usually takes a few days; larger renovation or facade projects may take more time. After the site visit we will give you a concrete estimate.",
     faq6Q: "Do you also work for offices and commercial properties?",
     faq6A: "Yes, we take on projects in offices, shops, showrooms and other commercial properties. We adapt to your company's schedule and can work outside regular business hours if needed.",
+
+    baEyebrow: "Before · After",
+    baTitle: "See the difference",
+    baText: "Drag the slider to discover the transformation.",
+    baLabelBefore: "Before",
+    baLabelAfter: "After",
+    baProject1: "Yellow House",
+    baProject2: "Large House Facade",
+    baProject3: "Apartment Facade",
   },
 };
 
@@ -644,4 +671,56 @@ form.addEventListener("submit", async (e) => {
   } else {
     status.innerHTML = "❌ Fehler. Bitte versuchen Sie es erneut.";
   }
+});
+
+// Before / After sliders
+document.querySelectorAll(".ba-slider").forEach((slider) => {
+  let animId = null;
+  let startTime = null;
+  let idleTimeout = null;
+  const AMPLITUDE = 12; // % de oscilación desde el centro
+  const PERIOD = 7000;  // ms por ciclo completo
+
+  function idleAnim(ts) {
+    if (!startTime) startTime = ts;
+    const pos = 50 + AMPLITUDE * Math.sin(((ts - startTime) / PERIOD) * 2 * Math.PI);
+    slider.style.setProperty("--pos", pos + "%");
+    animId = requestAnimationFrame(idleAnim);
+  }
+
+  function startIdle(delay = 0) {
+    clearTimeout(idleTimeout);
+    idleTimeout = setTimeout(() => {
+      if (animId) return;
+      startTime = null;
+      animId = requestAnimationFrame(idleAnim);
+    }, delay);
+  }
+
+  function stopIdle() {
+    clearTimeout(idleTimeout);
+    if (animId) {
+      cancelAnimationFrame(animId);
+      animId = null;
+    }
+  }
+
+  function setPos(clientX) {
+    stopIdle();
+    const rect = slider.getBoundingClientRect();
+    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+    slider.style.setProperty("--pos", (x / rect.width) * 100 + "%");
+  }
+
+  // Desktop: sigue el ratón sin necesidad de clicar
+  slider.addEventListener("mousemove", (e) => setPos(e.clientX));
+  slider.addEventListener("mouseleave", () => startIdle(600));
+
+  // Móvil: arrastre táctil
+  slider.addEventListener("touchstart", (e) => setPos(e.touches[0].clientX), { passive: true });
+  slider.addEventListener("touchmove", (e) => setPos(e.touches[0].clientX), { passive: true });
+  slider.addEventListener("touchend", () => startIdle(800));
+
+  // Animación idle al cargar
+  startIdle();
 });
