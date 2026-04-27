@@ -6,7 +6,9 @@
       "Bash(curl -s http://localhost:5175/)",
       "Bash(curl -s \"http://localhost:5175/proyectos%20Ginda%20antes%20y%20despues/casa-amarilla-antes.png\" -o /dev/null -w \"%{http_code}\")",
       "Bash(curl -s \"http://localhost:5175/proyectos%20Ginda%20antes%20y%20despues/casa%20amarilla%20despues.jpeg\" -o /dev/null -w \"%{http_code}\")",
-      "Bash(curl -s \"http://localhost:5175/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20antes.png\" -o /dev/null -w \"%{http_code}\")"
+      "Bash(curl -s \"http://localhost:5175/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20antes.png\" -o /dev/null -w \"%{http_code}\")",
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(sips --help)"
     ]
   }
 }

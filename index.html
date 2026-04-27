@@ -36,6 +36,22 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <script type="module" src="/src/main.js"></script>
+    <style>
+      .intro-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 3000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
+      }
+      .intro-overlay__logo {
+        width: min(380px, 62vw);
+        height: auto;
+        object-fit: contain;
+      }
+    </style>
   </head>
   <body>
     <div class="intro-overlay" id="introOverlay" aria-hidden="true">
