@@ -42,6 +42,9 @@ const translations = {
     service6Title: "Saubere und präzise Ausführung",
     service6Text:
       "Schutz von Böden und Möbeln sowie ein ordentlicher Ablauf von Anfang bis Ende.",
+    service7Title: "Gipserarbeiten und Untergrundvorbereitung",
+    service7Text:
+      "Ausgleich, Verputz und professionelle Vorbereitung von Wänden und Decken für ein optimales Malerendresultat.",
 
     whyEyebrow: "Warum Ginda",
     whyTitle: "Zuverlässigkeit, Erfahrung und Liebe zum Detail",
@@ -76,15 +79,8 @@ const translations = {
     reviewsEyebrow: "Bewertungen",
     reviewsTitle: "Was Kunden über Ginda sagen",
     reviewsText:
-      "Platzhaltertexte, die du später durch echte Kundenmeinungen ersetzen kannst.",
-    review1Text:
-      "Sehr saubere Arbeit, pünktlich und professionell. Das Ergebnis hat uns wirklich überzeugt.",
-    review1Name: "Privatkunde",
-    review2Text:
-      "Gute Beratung bei Farben und ein sehr ordentliches Finish. Würden wir wieder wählen.",
-    review2Name: "Bürokunde",
-    review3Text:
-      "Freundlicher Kontakt, klare Kommunikation und ein hochwertiges Resultat.",
+      "Saubere Arbeit, klare Kommunikation und zuverlässige Ausführung stehen für uns im Mittelpunkt.",
+    reviewsBtn: "Alle Bewertungen auf Google",
     review3Name: "Hausbesitzer",
 
     aboutEyebrow: "Über Petrica",
@@ -179,6 +175,9 @@ const translations = {
     service6Title: "Trabajo limpio y preciso",
     service6Text:
       "Protección de suelos y muebles y una ejecución ordenada de principio a fin.",
+    service7Title: "Trabajos de yeso y preparación de superficies",
+    service7Text:
+      "Nivelado, enlucido y preparación profesional de paredes y techos para un acabado de pintura óptimo.",
 
     whyEyebrow: "Por qué Ginda",
     whyTitle: "Fiabilidad, experiencia y atención al detalle",
@@ -212,16 +211,8 @@ const translations = {
     reviewsEyebrow: "Opiniones",
     reviewsTitle: "Lo que dicen los clientes sobre Ginda",
     reviewsText:
-      "Textos de ejemplo que luego puedes sustituir por opiniones reales.",
-    review1Text:
-      "Trabajo muy limpio, puntual y profesional. El resultado nos convenció totalmente.",
-    review1Name: "Cliente particular",
-    review2Text:
-      "Muy buena ayuda con los colores y un acabado muy cuidado. Lo volveríamos a elegir.",
-    review2Name: "Cliente de oficina",
-    review3Text:
-      "Contacto amable, comunicación clara y un resultado de gran calidad.",
-    review3Name: "Propietario de vivienda",
+      "Trabajo limpio, comunicación clara y ejecución de confianza en cada proyecto.",
+    reviewsBtn: "Ver todas las opiniones en Google",
 
     aboutEyebrow: "Sobre Petrica",
     aboutTitle: "Experiencia, pasión y precisión artesanal",
@@ -253,7 +244,7 @@ const translations = {
     faq1Q: "¿Ofrecéis un servicio completo para cambios de inquilino?",
     faq1A: "Sí, ofrecemos un servicio integral pensado especialmente para cambios de inquilino. Este incluye trabajos de pintura en toda la vivienda, pequeños arreglos con yeso en las zonas que lo necesiten y una limpieza final profesional, de modo que el piso quede completamente preparado para el siguiente inquilino. El presupuesto es personalizado y se determina según el estado y las necesidades concretas de la vivienda.",
     faq2Q: "¿Cómo funciona el presupuesto? ¿Hacéis una visita previa?",
-    faq2A: "Ofrecemos presupuestos totalmente sin compromiso. Para poder darte un precio exacto y ajustado a tu situación, preferimos hacer una visita previa a la vivienda o local — solo así podemos valorar bien el trabajo y darte una cifra realista. Contáctanos y acordamos una cita que te venga bien.",
+    faq2A: "Ofrecemos presupuestos totalmente sin compromiso. Para poder darte un precio exacto y ajustado a tu situación, preferimos hacer una visita previa a la vivienda o local, ya que solo así podemos valorar bien el trabajo y darte una cifra realista. Contáctanos y acordamos una cita que te venga bien.",
     faq3Q: "¿Qué servicios ofrecéis exactamente?",
     faq3A: "Nos especializamos en trabajos de pintura tanto en interiores como en exteriores: paredes, techos, puertas, ventanas, fachadas, trabajos decorativos y restauraciones. Bajo solicitud, también realizamos limpiezas finales, limpieza de ventanas y pequeñas reparaciones en el hogar, todo en un mismo servicio.",
     faq4Q: "¿En qué zonas trabajáis?",
@@ -314,6 +305,9 @@ const translations = {
     service6Title: "Clean and precise work",
     service6Text:
       "Protection of floors and furniture and an organised process from start to finish.",
+    service7Title: "Plastering and surface preparation",
+    service7Text:
+      "Levelling, plastering and professional preparation of walls and ceilings for an optimal painting result.",
 
     whyEyebrow: "Why Ginda",
     whyTitle: "Reliability, experience and attention to detail",
@@ -348,16 +342,8 @@ const translations = {
     reviewsEyebrow: "Reviews",
     reviewsTitle: "What clients say about Ginda",
     reviewsText:
-      "Sample texts that you can later replace with real customer reviews.",
-    review1Text:
-      "Very clean, punctual and professional work. We were really impressed with the result.",
-    review1Name: "Private client",
-    review2Text:
-      "Great advice on colours and a very neat finish. We would definitely choose them again.",
-    review2Name: "Office client",
-    review3Text:
-      "Friendly contact, clear communication and a high-quality final result.",
-    review3Name: "Homeowner",
+      "Clean work, clear communication and reliable execution on every project.",
+    reviewsBtn: "See all reviews on Google",
 
     aboutEyebrow: "About Petrica",
     aboutTitle: "Experience, passion and craftsmanship",
@@ -387,13 +373,13 @@ const translations = {
     faqTitle: "Answers to your questions",
     faqText: "We answer the most common questions about our services, quotes and the way we work.",
     faq1Q: "Do you offer a complete service for tenant changes?",
-    faq1A: "Yes, we offer a complete service designed specifically for tenant changes. This includes painting throughout the entire apartment, small plasterwork repairs where needed, and a professional end-of-tenancy clean — so that the property is fully ready for the next tenant. The price is personalised and depends on the condition and specific requirements of the property.",
+    faq1A: "Yes, we offer a complete service designed specifically for tenant changes. This includes painting throughout the entire apartment, small plasterwork repairs where needed, and a professional end-of-tenancy clean, so that the property is fully ready for the next tenant. The price is personalised and depends on the condition and specific requirements of the property.",
     faq2Q: "How does the quote work? Is there a site visit?",
-    faq2A: "We provide quotes with no obligation whatsoever. However, to give you an accurate and realistic price, we prefer to carry out a short visit on-site — this is the only way we can properly assess the scope of work and give you a reliable figure. Just get in touch and we will arrange a convenient appointment.",
+    faq2A: "We provide quotes with no obligation whatsoever. However, to give you an accurate and realistic price, we prefer to carry out a short visit on-site, as this is the only way we can properly assess the scope of work and give you a reliable figure. Just get in touch and we will arrange a convenient appointment.",
     faq3Q: "What services do you offer exactly?",
-    faq3A: "Our core focus is professional painting for both interior and exterior spaces: walls, ceilings, doors, windows and facades, as well as decorative and restoration work. On request, we also provide end-of-tenancy cleaning, window cleaning and small household repairs — all from a single provider.",
+    faq3A: "Our core focus is professional painting for both interior and exterior spaces: walls, ceilings, doors, windows and facades, as well as decorative and restoration work. On request, we also provide end-of-tenancy cleaning, window cleaning and small household repairs, all from a single provider.",
     faq4Q: "Which regions do you cover?",
-    faq4A: "We mainly operate in the cantons of Lucerne, Zurich, Zug and Aargau. For larger projects, we can also work in other regions — just ask us.",
+    faq4A: "We mainly operate in the cantons of Lucerne, Zurich, Zug and Aargau. For larger projects, we can also work in other regions; just ask us.",
     faq5Q: "How long does a typical painting project take?",
     faq5A: "It depends on the scope of the work. A typical apartment usually takes a few days; larger renovation or facade projects may take more time. After the site visit we will give you a concrete estimate.",
     faq6Q: "Do you also work for offices and commercial properties?",
@@ -724,3 +710,85 @@ document.querySelectorAll(".ba-slider").forEach((slider) => {
   // Animación idle al cargar
   startIdle();
 });
+
+// ── Google Reviews ─────────────────────────────────────────────────────────
+const GOOGLE_API_KEY = "AIzaSyBC3FOCzSQF_qs0UVGMezvjfV6_ZmblBx8";
+
+function initGoogleReviews() {
+  const attrDiv = document.createElement("div");
+  attrDiv.style.cssText = "position:absolute;width:0;height:0;overflow:hidden";
+  document.body.appendChild(attrDiv);
+
+  const service = new google.maps.places.PlacesService(attrDiv);
+
+  service.findPlaceFromQuery(
+    { query: "Ginda Malerarbeiten", fields: ["place_id"] },
+    (results, status) => {
+      if (status !== google.maps.places.PlacesServiceStatus.OK || !results?.length) {
+        console.warn("Google Places findPlaceFromQuery:", status);
+        return;
+      }
+      service.getDetails(
+        { placeId: results[0].place_id, fields: ["reviews", "rating", "user_ratings_total"] },
+        (place, detailStatus) => {
+          if (detailStatus !== google.maps.places.PlacesServiceStatus.OK || !place?.reviews?.length) {
+            console.warn("Google Places getDetails:", detailStatus);
+            return;
+          }
+          renderReviews(place.reviews, place.rating, place.user_ratings_total);
+        }
+      );
+    }
+  );
+}
+
+function renderReviews(reviews, rating, total) {
+  const group1 = document.getElementById("reviewsGroup1");
+  const group2 = document.getElementById("reviewsGroup2");
+  const summary = document.getElementById("reviews-summary");
+  if (!group1 || !group2) return;
+
+  if (summary && rating) {
+    summary.innerHTML = `
+      <div class="reviews-summary__rating">${rating.toFixed(1)}</div>
+      <div class="reviews-summary__stars">${"★".repeat(Math.round(rating))}${"☆".repeat(5 - Math.round(rating))}</div>
+      <div class="reviews-summary__count">${total} Bewertungen</div>`;
+  }
+
+  const cards = reviews.map((r) => {
+    const initials = r.author_name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
+    const stars = "★".repeat(r.rating) + "☆".repeat(5 - r.rating);
+    return `
+      <article class="review-card review-card--marquee">
+        <div class="review-card__top">
+          <div class="review-avatar">${initials}</div>
+          <div>
+            <h3>${r.author_name}</h3>
+            <span>${r.relative_time_description}</span>
+          </div>
+        </div>
+        <div class="stars">${stars}</div>
+        <p>${r.text}</p>
+      </article>`;
+  }).join("");
+
+  group1.innerHTML = cards;
+  group2.innerHTML = cards;
+
+  const track = document.getElementById("reviewsTrack");
+  if (track) {
+    track.style.animation = "none";
+    track.offsetHeight; // fuerza reflow
+    track.style.animation = "";
+  }
+}
+
+function loadGooglePlaces() {
+  window.initGoogleReviews = initGoogleReviews;
+  const s = document.createElement("script");
+  s.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=places&callback=initGoogleReviews`;
+  s.async = true;
+  document.head.appendChild(s);
+}
+
+loadGooglePlaces();

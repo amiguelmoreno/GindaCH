@@ -1150,6 +1150,21 @@ html {
   margin-top: 24px;
 }
 
+.service-card--wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+
+.service-card--wide .service-card__content {
+  flex: 1;
+}
+
+.service-card--wide .service-card__content p {
+  max-width: 600px;
+}
+
 .service-card--secondary {
   gap: 16px;
   padding: 24px;
@@ -1304,6 +1319,38 @@ html {
     width: 30px;
     height: 30px;
   }
+}
+
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.reviews-summary__rating {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.reviews-summary__stars {
+  font-size: 1.4rem;
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+.reviews-summary__count {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.reviews-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
 }
 
 .reviews-marquee {
