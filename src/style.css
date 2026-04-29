@@ -1057,7 +1057,7 @@ section {
       transparent 34%
     ),
     linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
-  animation: intro-hide 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.8s forwards;
+  animation: intro-hide 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 @keyframes intro-hide {
   to {
