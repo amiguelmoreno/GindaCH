@@ -25,13 +25,13 @@ const JOBS = [
   { src: "carrousel/carousel-5-exterior-classic.jpg", width: 500, quality: 78 },
   { src: "carrousel/carousel-6-showroom-lounge.jpg",  width: 500, quality: 78 },
 
-  // Before/After – ba-slider has aspect-ratio 4/3, displayed max ~400px wide → 500px @2x
-  { src: "proyectos Ginda antes y despues/casa-amarilla-antes.png",         width: 500, quality: 80 },
-  { src: "proyectos Ginda antes y despues/casa amarilla despues.jpeg",      width: 500, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada casa grande antes.png",   width: 500, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada casa grande despues.png", width: 500, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada piso antes.png",          width: 500, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada piso despues.jpeg",       width: 500, quality: 80 },
+  // Before/After – ba-slider displays up to 662px wide + used in marquee at ~454px → 700px covers both
+  { src: "proyectos Ginda antes y despues/casa-amarilla-antes.png",         width: 700, quality: 80 },
+  { src: "proyectos Ginda antes y despues/casa amarilla despues.jpeg",      width: 700, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada casa grande antes.png",   width: 700, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada casa grande despues.png", width: 700, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada piso antes.png",          width: 700, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada piso despues.jpeg",       width: 700, quality: 80 },
 
   // Project examples – displayed up to ~662px as main, 72px as thumb
   { src: "beispiel/example-1-house-classic.jpg",  width: 800, quality: 80 },
