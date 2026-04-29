@@ -707,7 +707,12 @@ document.querySelectorAll(".ba-slider").forEach((slider) => {
   slider.addEventListener("touchmove", (e) => setPos(e.touches[0].clientX), { passive: true });
   slider.addEventListener("touchend", () => startIdle(800));
 
-  // Animación idle al cargar
-  startIdle();
+  // Only animate while slider is visible – avoids 3 continuous RAFs during page load
+  new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) startIdle();
+      else stopIdle();
+    });
+  }, { threshold: 0.1 }).observe(slider);
 });
 

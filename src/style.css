@@ -1674,6 +1674,7 @@ html {
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  contain: layout style;
   cursor: ew-resize;
   user-select: none;
   -webkit-user-select: none;
@@ -1693,6 +1694,7 @@ html {
   position: absolute;
   inset: 0;
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+  will-change: clip-path;
 }
 
 .ba-img-before-wrap img {

@@ -26,7 +26,10 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" /></noscript>
-    <link rel="preload" as="image" href="/coche-petrica.webp" fetchpriority="high" />
+    <link rel="preload" as="image"
+      imagesrcset="/coche-petrica-520.webp 520w, /coche-petrica.webp 700w"
+      imagesizes="(min-width: 768px) 520px, 700px"
+      fetchpriority="high" />
 
     <meta
       property="og:title"
@@ -260,7 +263,8 @@
           <!-- IMAGEN -->
           <div class="hero-image">
             <picture>
-              <source srcset="/coche-petrica.webp" type="image/webp" />
+              <source media="(min-width: 768px)" srcset="/coche-petrica-520.webp" />
+              <source srcset="/coche-petrica.webp" />
               <img
                 src="/coche-petrica.png"
                 alt="Maler bei der Arbeit"
