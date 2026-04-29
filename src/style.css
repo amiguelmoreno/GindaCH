@@ -270,8 +270,6 @@ section {
     rgba(238, 244, 255, 0.72)
   );
   border-bottom: 1px solid rgba(44, 40, 185, 0.08);
-  content-visibility: auto;
-  contain-intrinsic-size: auto 248px;
 }
 
 .projects-marquee::before,
@@ -511,8 +509,6 @@ section {
 
 .section {
   padding: 92px 0;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 500px;
 }
 
 .section-alt {
@@ -1680,7 +1676,6 @@ html {
   position: absolute;
   inset: 0;
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
-  will-change: clip-path;
 }
 
 .ba-img-before-wrap img {
