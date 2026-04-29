@@ -618,11 +618,13 @@ const scrollObserver = new IntersectionObserver(
 
 animTargets.forEach((el) => scrollObserver.observe(el));
 
-// Start marquee after LCP — compositor layer setup blocks LCP if started too early
-setTimeout(() => {
-  document.querySelectorAll(".projects-marquee__track, .reviews-marquee__track")
-    .forEach(el => el.classList.add("is-running"));
-}, 3500);
+// Start marquee after first paint
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    document.querySelectorAll(".projects-marquee__track, .reviews-marquee__track")
+      .forEach(el => el.classList.add("is-running"));
+  });
+});
 
 const introOverlay = document.getElementById("introOverlay");
 
