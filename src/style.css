@@ -382,29 +382,13 @@ section {
   position: relative;
   overflow: hidden;
   padding: 90px 0 60px;
+  background:
+    radial-gradient(circle 200px at 92% -5%, rgba(54, 144, 228, 0.22), transparent 70%),
+    radial-gradient(circle 260px at -12% 110%, rgba(44, 40, 185, 0.13), transparent 70%);
 }
 
 .hero-bg {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(20px);
-  pointer-events: none;
-}
-
-.hero-bg-1 {
-  width: 280px;
-  height: 280px;
-  top: -40px;
-  right: 6%;
-  background: rgba(54, 144, 228, 0.24);
-}
-
-.hero-bg-2 {
-  width: 360px;
-  height: 360px;
-  left: -100px;
-  bottom: -120px;
-  background: rgba(44, 40, 185, 0.14);
+  display: none;
 }
 
 .hero-grid {
