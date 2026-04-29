@@ -624,7 +624,6 @@ if (introOverlay) {
   document.body.classList.add("intro-lock");
   introOverlay.addEventListener("animationend", () => {
     document.body.classList.remove("intro-lock");
-    introOverlay.style.display = "none";
   }, { once: true });
 }
 
