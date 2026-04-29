@@ -624,10 +624,8 @@ if (introOverlay) {
   document.body.classList.add("intro-lock");
 
   window.addEventListener("load", () => {
-    setTimeout(() => {
-      introOverlay.classList.add("is-hidden");
-      document.body.classList.remove("intro-lock");
-    }, 600);
+    introOverlay.classList.add("is-hidden");
+    document.body.classList.remove("intro-lock");
   });
 }
 
