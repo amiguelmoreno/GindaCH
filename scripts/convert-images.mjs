@@ -17,21 +17,21 @@ const JOBS = [
   // Foto casa
   { src: "foto-casa.jpeg", width: 900, quality: 82 },
 
-  // Carousel – displayed max ~454px, resize to 960 for @2x
-  { src: "carrousel/carousel-1-exterior-modern.jpg",  width: 960, quality: 80 },
-  { src: "carrousel/carousel-2-bedroom-white.jpg",    width: 960, quality: 80 },
-  { src: "carrousel/carousel-3-showroom-wide.jpg",    width: 960, quality: 80 },
-  { src: "carrousel/carousel-4-byd-wall.jpg",         width: 960, quality: 80 },
-  { src: "carrousel/carousel-5-exterior-classic.jpg", width: 960, quality: 80 },
-  { src: "carrousel/carousel-6-showroom-lounge.jpg",  width: 960, quality: 80 },
+  // Carousel – displayed max 454px desktop / 220px mobile → 500px @2x
+  { src: "carrousel/carousel-1-exterior-modern.jpg",  width: 500, quality: 78 },
+  { src: "carrousel/carousel-2-bedroom-white.jpg",    width: 500, quality: 78 },
+  { src: "carrousel/carousel-3-showroom-wide.jpg",    width: 500, quality: 78 },
+  { src: "carrousel/carousel-4-byd-wall.jpg",         width: 500, quality: 78 },
+  { src: "carrousel/carousel-5-exterior-classic.jpg", width: 500, quality: 78 },
+  { src: "carrousel/carousel-6-showroom-lounge.jpg",  width: 500, quality: 78 },
 
-  // Before/After – displayed ~662px wide, resize to 900
-  { src: "proyectos Ginda antes y despues/casa-amarilla-antes.png",         width: 900, quality: 82 },
-  { src: "proyectos Ginda antes y despues/casa amarilla despues.jpeg",      width: 900, quality: 82 },
-  { src: "proyectos Ginda antes y despues/fachada casa grande antes.png",   width: 900, quality: 82 },
-  { src: "proyectos Ginda antes y despues/fachada casa grande despues.png", width: 900, quality: 82 },
-  { src: "proyectos Ginda antes y despues/fachada piso antes.png",          width: 900, quality: 82 },
-  { src: "proyectos Ginda antes y despues/fachada piso despues.jpeg",       width: 900, quality: 82 },
+  // Before/After – ba-slider has aspect-ratio 4/3, displayed max ~400px wide → 500px @2x
+  { src: "proyectos Ginda antes y despues/casa-amarilla-antes.png",         width: 500, quality: 80 },
+  { src: "proyectos Ginda antes y despues/casa amarilla despues.jpeg",      width: 500, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada casa grande antes.png",   width: 500, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada casa grande despues.png", width: 500, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada piso antes.png",          width: 500, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada piso despues.jpeg",       width: 500, quality: 80 },
 
   // Project examples – displayed up to ~662px as main, 72px as thumb
   { src: "beispiel/example-1-house-classic.jpg",  width: 800, quality: 80 },
