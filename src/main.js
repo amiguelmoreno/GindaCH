@@ -627,7 +627,7 @@ if (introOverlay) {
     setTimeout(() => {
       introOverlay.classList.add("is-hidden");
       document.body.classList.remove("intro-lock");
-    }, 1400);
+    }, 600);
   });
 }
 
