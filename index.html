@@ -23,10 +23,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=M+PLUS+Rounded+1c:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" /></noscript>
+    <link rel="preload" as="image" href="/coche-petrica.webp" fetchpriority="high" />
 
     <meta
       property="og:title"
@@ -122,9 +122,11 @@
     <div class="intro-overlay" id="introOverlay" aria-hidden="true">
       <div class="intro-overlay__inner">
         <img
-          src="/logo-ginda%20copy.jpg"
+          src="/logo-ginda.webp"
           alt="Ginda Logo"
           class="intro-overlay__logo"
+          width="500"
+          height="484"
         />
       </div>
     </div>
@@ -154,7 +156,7 @@
       <div class="container header-inner">
         <a href="#top" class="brand">
           <div class="brand-logo">
-            <img src="/logo-ginda%20copy.jpg" alt="Ginda Logo" />
+            <img src="/logo-ginda.webp" alt="Ginda Logo" width="58" height="58" />
           </div>
           <div class="brand-text">
             <strong>Ginda</strong>
@@ -196,54 +198,27 @@
     <section class="projects-marquee" aria-label="Projekte">
       <div class="projects-marquee__track">
         <div class="projects-marquee__group">
-          <img
-            src="/carrousel/carousel-1-exterior-modern.jpg"
-            alt="Proyecto exterior moderno"
-          />
-          <img
-            src="/carrousel/carousel-2-bedroom-white.jpg"
-            alt="Dormitorio blanco"
-          />
-          <img
-            src="/proyectos%20Ginda%20antes%20y%20despues/casa%20amarilla%20despues.jpeg"
-            alt="Casa amarilla después"
-          />
-          <img
-            src="/carrousel/carousel-3-showroom-wide.jpg"
-            alt="Showroom amplio"
-          />
-          <img
-            src="/carrousel/carousel-4-byd-wall.jpg"
-            alt="Pared decorativa BYD"
-          />
-          <img
-            src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20despues.png"
-            alt="Fachada casa grande después"
-          />
-          <img
-            src="/carrousel/carousel-5-exterior-classic.jpg"
-            alt="Casa exterior clásica"
-          />
-          <img
-            src="/carrousel/carousel-6-showroom-lounge.jpg"
-            alt="Zona lounge showroom"
-          />
-          <img
-            src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20despues.jpeg"
-            alt="Fachada piso después"
-          />
+          <img src="/carrousel/carousel-1-exterior-modern.webp" alt="Proyecto exterior moderno" width="320" height="210" />
+          <img src="/carrousel/carousel-2-bedroom-white.webp" alt="Dormitorio blanco" width="320" height="210" />
+          <img src="/proyectos%20Ginda%20antes%20y%20despues/casa%20amarilla%20despues.webp" alt="Casa amarilla después" width="320" height="210" />
+          <img src="/carrousel/carousel-3-showroom-wide.webp" alt="Showroom amplio" width="320" height="210" />
+          <img src="/carrousel/carousel-4-byd-wall.webp" alt="Pared decorativa BYD" width="320" height="210" />
+          <img src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20despues.webp" alt="Fachada casa grande después" width="320" height="210" />
+          <img src="/carrousel/carousel-5-exterior-classic.webp" alt="Casa exterior clásica" width="320" height="210" />
+          <img src="/carrousel/carousel-6-showroom-lounge.webp" alt="Zona lounge showroom" width="320" height="210" />
+          <img src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20despues.webp" alt="Fachada piso después" width="320" height="210" />
         </div>
 
         <div class="projects-marquee__group" aria-hidden="true">
-          <img src="/carrousel/carousel-1-exterior-modern.jpg" alt="" />
-          <img src="/carrousel/carousel-2-bedroom-white.jpg" alt="" />
-          <img src="/proyectos%20Ginda%20antes%20y%20despues/casa%20amarilla%20despues.jpeg" alt="" />
-          <img src="/carrousel/carousel-3-showroom-wide.jpg" alt="" />
-          <img src="/carrousel/carousel-4-byd-wall.jpg" alt="" />
-          <img src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20despues.png" alt="" />
-          <img src="/carrousel/carousel-5-exterior-classic.jpg" alt="" />
-          <img src="/carrousel/carousel-6-showroom-lounge.jpg" alt="" />
-          <img src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20despues.jpeg" alt="" />
+          <img src="/carrousel/carousel-1-exterior-modern.webp" alt="" width="320" height="210" />
+          <img src="/carrousel/carousel-2-bedroom-white.webp" alt="" width="320" height="210" />
+          <img src="/proyectos%20Ginda%20antes%20y%20despues/casa%20amarilla%20despues.webp" alt="" width="320" height="210" />
+          <img src="/carrousel/carousel-3-showroom-wide.webp" alt="" width="320" height="210" />
+          <img src="/carrousel/carousel-4-byd-wall.webp" alt="" width="320" height="210" />
+          <img src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20despues.webp" alt="" width="320" height="210" />
+          <img src="/carrousel/carousel-5-exterior-classic.webp" alt="" width="320" height="210" />
+          <img src="/carrousel/carousel-6-showroom-lounge.webp" alt="" width="320" height="210" />
+          <img src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20despues.webp" alt="" width="320" height="210" />
         </div>
       </div>
     </section>
@@ -284,7 +259,17 @@
 
           <!-- IMAGEN -->
           <div class="hero-image">
-            <img src="/coche-petrica.png" alt="Maler bei der Arbeit" />
+            <picture>
+              <source srcset="/coche-petrica.webp" type="image/webp" />
+              <img
+                src="/coche-petrica.png"
+                alt="Maler bei der Arbeit"
+                width="700"
+                height="1011"
+                fetchpriority="high"
+                loading="eager"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -507,8 +492,11 @@
               <div class="project-viewer" data-project="0">
                 <img
                   class="project-main-image"
-                  src="/beispiel/example-1-house-classic.jpg"
+                  src="/beispiel/example-1-house-classic.webp"
                   alt="Fachada proyecto 1"
+                  width="800"
+                  height="550"
+                  loading="lazy"
                 />
               </div>
               <div class="project-content">
@@ -519,32 +507,14 @@
                 </p>
               </div>
               <div class="project-thumbs" data-project-thumbs="0">
-                <button
-                  class="thumb active"
-                  data-image="/beispiel/example-1-house-classic.jpg"
-                >
-                  <img
-                    src="/beispiel/example-1-house-classic.jpg"
-                    alt="Fachada thumb 1"
-                  />
+                <button class="thumb active" data-image="/beispiel/example-1-house-classic.webp">
+                  <img src="/beispiel/example-1-house-classic.webp" alt="Fachada thumb 1" width="72" height="72" loading="lazy" />
                 </button>
-                <button
-                  class="thumb"
-                  data-image="/beispiel/example-8-garage-red.jpg"
-                >
-                  <img
-                    src="/beispiel/example-8-garage-red.jpg"
-                    alt="Fachada thumb 2"
-                  />
+                <button class="thumb" data-image="/beispiel/example-8-garage-red.webp">
+                  <img src="/beispiel/example-8-garage-red.webp" alt="Fachada thumb 2" width="72" height="72" loading="lazy" />
                 </button>
-                <button
-                  class="thumb"
-                  data-image="/beispiel/example-2-house-modern.jpg"
-                >
-                  <img
-                    src="/beispiel/example-2-house-modern.jpg"
-                    alt="Fachada thumb 3"
-                  />
+                <button class="thumb" data-image="/beispiel/example-2-house-modern.webp">
+                  <img src="/beispiel/example-2-house-modern.webp" alt="Fachada thumb 3" width="72" height="72" loading="lazy" />
                 </button>
               </div>
             </article>
@@ -553,8 +523,11 @@
               <div class="project-viewer" data-project="1">
                 <img
                   class="project-main-image"
-                  src="/beispiel/example-3-showroom-lounge.jpg"
+                  src="/beispiel/example-3-showroom-lounge.webp"
                   alt="Büro proyecto 1"
+                  width="800"
+                  height="550"
+                  loading="lazy"
                 />
               </div>
               <div class="project-content">
@@ -565,32 +538,14 @@
                 </p>
               </div>
               <div class="project-thumbs" data-project-thumbs="1">
-                <button
-                  class="thumb active"
-                  data-image="/beispiel/example-3-showroom-lounge.jpg"
-                >
-                  <img
-                    src="/beispiel/example-3-showroom-lounge.jpg"
-                    alt="Büro thumb 1"
-                  />
+                <button class="thumb active" data-image="/beispiel/example-3-showroom-lounge.webp">
+                  <img src="/beispiel/example-3-showroom-lounge.webp" alt="Büro thumb 1" width="72" height="72" loading="lazy" />
                 </button>
-                <button
-                  class="thumb"
-                  data-image="/beispiel/example-5-showroom-wide.jpg"
-                >
-                  <img
-                    src="/beispiel/example-5-showroom-wide.jpg"
-                    alt="Büro thumb 2"
-                  />
+                <button class="thumb" data-image="/beispiel/example-5-showroom-wide.webp">
+                  <img src="/beispiel/example-5-showroom-wide.webp" alt="Büro thumb 2" width="72" height="72" loading="lazy" />
                 </button>
-                <button
-                  class="thumb"
-                  data-image="/beispiel/example-6-byd-wall.jpg"
-                >
-                  <img
-                    src="/beispiel/example-6-byd-wall.jpg"
-                    alt="Büro thumb 3"
-                  />
+                <button class="thumb" data-image="/beispiel/example-6-byd-wall.webp">
+                  <img src="/beispiel/example-6-byd-wall.webp" alt="Büro thumb 3" width="72" height="72" loading="lazy" />
                 </button>
               </div>
             </article>
@@ -599,8 +554,11 @@
               <div class="project-viewer" data-project="2">
                 <img
                   class="project-main-image"
-                  src="/beispiel/example-4-bedroom-white.jpg"
+                  src="/beispiel/example-4-bedroom-white.webp"
                   alt="Interior proyecto 1"
+                  width="800"
+                  height="550"
+                  loading="lazy"
                 />
               </div>
               <div class="project-content">
@@ -611,32 +569,14 @@
                 </p>
               </div>
               <div class="project-thumbs" data-project-thumbs="2">
-                <button
-                  class="thumb active"
-                  data-image="/beispiel/example-4-bedroom-white.jpg"
-                >
-                  <img
-                    src="/beispiel/example-4-bedroom-white.jpg"
-                    alt="Interior thumb 1"
-                  />
+                <button class="thumb active" data-image="/beispiel/example-4-bedroom-white.webp">
+                  <img src="/beispiel/example-4-bedroom-white.webp" alt="Interior thumb 1" width="72" height="72" loading="lazy" />
                 </button>
-                <button
-                  class="thumb"
-                  data-image="/beispiel/example-7-kitchen-blue.jpg"
-                >
-                  <img
-                    src="/beispiel/example-7-kitchen-blue.jpg"
-                    alt="Interior thumb 2"
-                  />
+                <button class="thumb" data-image="/beispiel/example-7-kitchen-blue.webp">
+                  <img src="/beispiel/example-7-kitchen-blue.webp" alt="Interior thumb 2" width="72" height="72" loading="lazy" />
                 </button>
-                <button
-                  class="thumb"
-                  data-image="/beispiel/example-9-living-dark.jpg"
-                >
-                  <img
-                    src="/beispiel/example-9-living-dark.jpg"
-                    alt="Interior thumb 3"
-                  />
+                <button class="thumb" data-image="/beispiel/example-9-living-dark.webp">
+                  <img src="/beispiel/example-9-living-dark.webp" alt="Interior thumb 3" width="72" height="72" loading="lazy" />
                 </button>
               </div>
             </article>
@@ -657,15 +597,21 @@
               <div class="ba-slider">
                 <img
                   class="ba-img-after"
-                  src="/proyectos%20Ginda%20antes%20y%20despues/casa%20amarilla%20despues.jpeg"
+                  src="/proyectos%20Ginda%20antes%20y%20despues/casa%20amarilla%20despues.webp"
                   alt="Nachher"
                   draggable="false"
+                  width="900"
+                  height="675"
+                  loading="lazy"
                 />
                 <div class="ba-img-before-wrap">
                   <img
-                    src="/proyectos%20Ginda%20antes%20y%20despues/casa-amarilla-antes.png"
+                    src="/proyectos%20Ginda%20antes%20y%20despues/casa-amarilla-antes.webp"
                     alt="Vorher"
                     draggable="false"
+                    width="900"
+                    height="675"
+                    loading="lazy"
                   />
                 </div>
                 <div class="ba-divider">
@@ -686,15 +632,21 @@
               <div class="ba-slider">
                 <img
                   class="ba-img-after"
-                  src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20despues.png"
+                  src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20despues.webp"
                   alt="Nachher"
                   draggable="false"
+                  width="900"
+                  height="1200"
+                  loading="lazy"
                 />
                 <div class="ba-img-before-wrap">
                   <img
-                    src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20antes.png"
+                    src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20casa%20grande%20antes.webp"
                     alt="Vorher"
                     draggable="false"
+                    width="900"
+                    height="1200"
+                    loading="lazy"
                   />
                 </div>
                 <div class="ba-divider">
@@ -715,15 +667,21 @@
               <div class="ba-slider">
                 <img
                   class="ba-img-after"
-                  src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20despues.jpeg"
+                  src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20despues.webp"
                   alt="Nachher"
                   draggable="false"
+                  width="900"
+                  height="675"
+                  loading="lazy"
                 />
                 <div class="ba-img-before-wrap">
                   <img
-                    src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20antes.png"
+                    src="/proyectos%20Ginda%20antes%20y%20despues/fachada%20piso%20antes.webp"
                     alt="Vorher"
                     draggable="false"
+                    width="900"
+                    height="675"
+                    loading="lazy"
                   />
                 </div>
                 <div class="ba-divider">
@@ -928,7 +886,7 @@
 
           <div class="about-visual">
             <div class="about-logo-box">
-              <img src="/petrica.png" alt="Ginda Logo" />
+              <img src="/petrica.webp" alt="Petrica" width="520" height="799" loading="lazy" />
             </div>
           </div>
         </div>
