@@ -1064,9 +1064,6 @@ section {
   mix-blend-mode: multiply;
 }
 
-body.intro-lock {
-  overflow: hidden;
-}
 html {
   overflow-y: scroll;
 }

@@ -629,10 +629,7 @@ requestAnimationFrame(() => {
 const introOverlay = document.getElementById("introOverlay");
 
 if (introOverlay) {
-  document.body.classList.add("intro-lock");
-  introOverlay.addEventListener("animationend", () => {
-    document.body.classList.remove("intro-lock");
-  }, { once: true });
+  introOverlay.addEventListener("animationend", () => {}, { once: true });
 }
 
 const form = document.getElementById("contact-form");
