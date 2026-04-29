@@ -1057,13 +1057,14 @@ section {
       transparent 34%
     ),
     linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
-  animation: intro-hide 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  opacity: 0;
+  animation: intro-show-hide 1.8s ease 0s forwards;
 }
-@keyframes intro-hide {
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
+@keyframes intro-show-hide {
+  0%   { opacity: 0; transform: translateY(0); }
+  4%   { opacity: 1; transform: translateY(0); }
+  78%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-100%); }
 }
 
 
