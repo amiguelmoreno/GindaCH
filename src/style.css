@@ -1058,12 +1058,12 @@ section {
     ),
     linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
   opacity: 0;
-  animation: intro-show-hide 1.8s ease 0s forwards;
+  animation: intro-show-hide 1s ease 0s forwards;
 }
 @keyframes intro-show-hide {
   0%   { opacity: 0; transform: translateY(0); }
-  4%   { opacity: 1; transform: translateY(0); }
-  78%  { opacity: 1; transform: translateY(0); }
+  5%   { opacity: 1; transform: translateY(0); }
+  75%  { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(-100%); }
 }
 
