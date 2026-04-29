@@ -622,11 +622,10 @@ const introOverlay = document.getElementById("introOverlay");
 
 if (introOverlay) {
   document.body.classList.add("intro-lock");
-
-  window.addEventListener("load", () => {
-    introOverlay.classList.add("is-hidden");
+  introOverlay.addEventListener("animationend", () => {
     document.body.classList.remove("intro-lock");
-  });
+    introOverlay.style.display = "none";
+  }, { once: true });
 }
 
 const form = document.getElementById("contact-form");
