@@ -26,19 +26,19 @@ const JOBS = [
   { src: "carrousel/carousel-5-exterior-classic.jpg", width: 500, quality: 78 },
   { src: "carrousel/carousel-6-showroom-lounge.jpg",  width: 500, quality: 78 },
 
-  // Before/After – 700w full, 430w desktop srcset (BA grid shows ~375px on desktop, ~662px on mobile)
+  // Before/After – 700w full (spaced paths ok for src=), 430w in /ba/ (no spaces = safe for srcset)
   { src: "proyectos Ginda antes y despues/casa-amarilla-antes.png",         width: 700, quality: 80 },
-  { src: "proyectos Ginda antes y despues/casa-amarilla-antes.png",         out: "proyectos Ginda antes y despues/casa-amarilla-antes-430.webp",         width: 430, quality: 80 },
+  { src: "proyectos Ginda antes y despues/casa-amarilla-antes.png",         out: "ba/casa-amarilla-antes-430.webp",         width: 430, quality: 80 },
   { src: "proyectos Ginda antes y despues/casa amarilla despues.jpeg",      width: 700, quality: 80 },
-  { src: "proyectos Ginda antes y despues/casa amarilla despues.jpeg",      out: "proyectos Ginda antes y despues/casa amarilla despues-430.webp",      width: 430, quality: 80 },
+  { src: "proyectos Ginda antes y despues/casa amarilla despues.jpeg",      out: "ba/casa-amarilla-despues-430.webp",      width: 430, quality: 80 },
   { src: "proyectos Ginda antes y despues/fachada casa grande antes.png",   width: 700, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada casa grande antes.png",   out: "proyectos Ginda antes y despues/fachada casa grande antes-430.webp",   width: 430, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada casa grande antes.png",   out: "ba/fachada-casa-grande-antes-430.webp",   width: 430, quality: 80 },
   { src: "proyectos Ginda antes y despues/fachada casa grande despues.png", width: 700, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada casa grande despues.png", out: "proyectos Ginda antes y despues/fachada casa grande despues-430.webp", width: 430, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada casa grande despues.png", out: "ba/fachada-casa-grande-despues-430.webp", width: 430, quality: 80 },
   { src: "proyectos Ginda antes y despues/fachada piso antes.png",          width: 700, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada piso antes.png",          out: "proyectos Ginda antes y despues/fachada piso antes-430.webp",          width: 430, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada piso antes.png",          out: "ba/fachada-piso-antes-430.webp",          width: 430, quality: 80 },
   { src: "proyectos Ginda antes y despues/fachada piso despues.jpeg",       width: 700, quality: 80 },
-  { src: "proyectos Ginda antes y despues/fachada piso despues.jpeg",       out: "proyectos Ginda antes y despues/fachada piso despues-430.webp",       width: 430, quality: 80 },
+  { src: "proyectos Ginda antes y despues/fachada piso despues.jpeg",       out: "ba/fachada-piso-despues-430.webp",       width: 430, quality: 80 },
 
   // Project examples – displayed up to ~662px as main, 72px as thumb
   { src: "beispiel/example-1-house-classic.jpg",  width: 800, quality: 80 },
