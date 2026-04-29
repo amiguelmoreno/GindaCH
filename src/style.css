@@ -512,6 +512,10 @@ section {
 .section {
   padding: 92px 0;
 }
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
 
 .section-alt {
   background: #f5f7fa;
