@@ -22,9 +22,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <link rel="preload" as="image"
-      imagesrcset="/coche-petrica-520.webp 520w, /coche-petrica.webp 700w"
+      imagesrcset="/coche-petrica-520.avif 520w, /coche-petrica.avif 700w"
       imagesizes="(min-width: 768px) 520px, 700px"
-      fetchpriority="high" />
+      fetchpriority="high"
+      type="image/avif" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
@@ -263,7 +264,9 @@
           <!-- IMAGEN -->
           <div class="hero-image">
             <picture>
+              <source media="(min-width: 768px)" type="image/avif" srcset="/coche-petrica-520.avif" />
               <source media="(min-width: 768px)" srcset="/coche-petrica-520.webp" />
+              <source type="image/avif" srcset="/coche-petrica.avif" />
               <source srcset="/coche-petrica.webp" />
               <img
                 src="/coche-petrica.png"
