@@ -304,6 +304,8 @@ section {
 .projects-marquee__track {
   display: flex;
   width: max-content;
+}
+.projects-marquee__track.is-running {
   animation: marqueeScroll 32s linear infinite;
 }
 
@@ -1367,6 +1369,8 @@ html {
 .reviews-marquee__track {
   display: flex;
   width: max-content;
+}
+.reviews-marquee__track.is-running {
   animation: reviewsScroll 60s linear infinite;
 }
 

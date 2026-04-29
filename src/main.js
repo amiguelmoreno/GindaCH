@@ -618,17 +618,12 @@ const scrollObserver = new IntersectionObserver(
 
 animTargets.forEach((el) => scrollObserver.observe(el));
 
-// Pause marquee animations until in viewport to avoid compositor layers at load
-const marqueeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    const track = e.target.querySelector(".projects-marquee__track, .reviews-marquee__track");
-    if (track) track.style.animationPlayState = e.isIntersecting ? "running" : "paused";
+// Start marquee animations after first paint to avoid compositor layers before FCP
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    document.querySelectorAll(".projects-marquee__track, .reviews-marquee__track")
+      .forEach(el => el.classList.add("is-running"));
   });
-}, { rootMargin: "200px" });
-document.querySelectorAll(".projects-marquee, .reviews-section").forEach(el => {
-  const track = el.querySelector(".projects-marquee__track, .reviews-marquee__track");
-  if (track) track.style.animationPlayState = "paused";
-  marqueeObserver.observe(el);
 });
 
 const introOverlay = document.getElementById("introOverlay");
