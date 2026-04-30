@@ -1891,7 +1891,7 @@ html {
 .footer-copy,
 .footer-copy-right {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 @media (max-width: 900px) {
