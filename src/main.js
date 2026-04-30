@@ -411,56 +411,26 @@ const translations = {
   },
 };
 
-const langButtons = document.querySelectorAll(".lang-btn");
-const translatableElements = document.querySelectorAll("[data-i18n]");
-const placeholderElements = document.querySelectorAll("[data-placeholder]");
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav");
-const navLinks = document.querySelectorAll(".nav a");
-
-const setLanguage = (lang) => {
-  const dictionary = translations[lang];
-  if (!dictionary) return;
-
-  document.documentElement.lang = lang;
-
-  translatableElements.forEach((element) => {
-    const key = element.dataset.i18n;
-    if (dictionary[key]) {
-      element.textContent = dictionary[key];
-    }
-  });
-
-  placeholderElements.forEach((element) => {
-    const key = element.dataset.placeholder;
-    if (dictionary[key]) {
-      element.placeholder = dictionary[key];
-    }
-  });
-
-  langButtons.forEach((button) => {
-    button.classList.toggle("active", button.dataset.lang === lang);
-  });
-
-  localStorage.setItem("ginda-language", lang);
-};
-
-langButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setLanguage(button.dataset.lang);
-  });
-});
+// ─── Minimal sync setup (runs before first paint) ──────────────────────────
 
 const savedLanguage = localStorage.getItem("ginda-language") || "de";
-setLanguage(savedLanguage);
 
+const langButtons = document.querySelectorAll(".lang-btn");
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+
+// Mark active lang button immediately (visible after overlay exits)
+langButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.lang === savedLanguage));
+document.documentElement.lang = savedLanguage;
+
+// Menu toggle must work as soon as overlay exits
 if (menuToggle && nav) {
+  const navLinks = nav.querySelectorAll("a");
   menuToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
-
-  navLinks.forEach((link) => {
+  navLinks.forEach(link => {
     link.addEventListener("click", () => {
       nav.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
@@ -468,172 +438,7 @@ if (menuToggle && nav) {
   });
 }
 
-const thumbGroups = document.querySelectorAll(".project-thumbs");
-
-thumbGroups.forEach((group) => {
-  const thumbs = group.querySelectorAll(".thumb");
-  const projectCard = group.closest(".project-card");
-  const mainImage = projectCard.querySelector(".project-main-image");
-
-  thumbs.forEach((thumb) => {
-    thumb.addEventListener("click", () => {
-      const newImage = thumb.dataset.image;
-      if (newImage && mainImage) {
-        mainImage.src = newImage;
-      }
-
-      thumbs.forEach((item) => item.classList.remove("active"));
-      thumb.classList.add("active");
-    });
-  });
-});
-
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const lightboxClose = document.getElementById("lightboxClose");
-
-const openLightbox = (src, alt = "") => {
-  if (!lightbox || !lightboxImage) return;
-  lightboxImage.src = src;
-  lightboxImage.alt = alt;
-  lightbox.classList.add("open");
-  lightbox.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-};
-
-const closeLightbox = () => {
-  if (!lightbox || !lightboxImage) return;
-  lightbox.classList.remove("open");
-  lightbox.setAttribute("aria-hidden", "true");
-  lightboxImage.src = "";
-  lightboxImage.alt = "";
-  document.body.style.overflow = "";
-};
-
-document.querySelectorAll(".project-main-image").forEach((image) => {
-  image.addEventListener("click", () => {
-    openLightbox(image.src, image.alt);
-  });
-});
-
-if (lightboxClose) {
-  lightboxClose.addEventListener("click", closeLightbox);
-}
-
-if (lightbox) {
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-  });
-}
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeLightbox();
-  }
-});
-
-// FAQ accordion animation
-document.querySelectorAll(".faq-item").forEach((details) => {
-  const summary = details.querySelector(".faq-question");
-  const answer = details.querySelector(".faq-answer");
-
-  summary.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    if (details.open) {
-      const cs = window.getComputedStyle(answer);
-      const pt = parseFloat(cs.paddingTop);
-      const pb = parseFloat(cs.paddingBottom);
-
-      answer.style.height = answer.offsetHeight + "px";
-      answer.style.paddingTop = pt + "px";
-      answer.style.paddingBottom = pb + "px";
-
-      requestAnimationFrame(() => {
-        answer.style.height = "0";
-        answer.style.paddingTop = "0";
-        answer.style.paddingBottom = "0";
-
-        const done = (ev) => {
-          if (ev.propertyName !== "height") return;
-          answer.removeEventListener("transitionend", done);
-          details.removeAttribute("open");
-          answer.style.cssText = "";
-        };
-        answer.addEventListener("transitionend", done);
-      });
-    } else {
-      details.setAttribute("open", "");
-      const cs = window.getComputedStyle(answer);
-      const pt = parseFloat(cs.paddingTop);
-      const pb = parseFloat(cs.paddingBottom);
-
-      answer.style.paddingTop = "0";
-      answer.style.paddingBottom = "0";
-      answer.style.height = "0";
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          answer.style.height = answer.scrollHeight + pt + pb + "px";
-          answer.style.paddingTop = pt + "px";
-          answer.style.paddingBottom = pb + "px";
-
-          const done = (ev) => {
-            if (ev.propertyName !== "height") return;
-            answer.removeEventListener("transitionend", done);
-            answer.style.cssText = "";
-          };
-          answer.addEventListener("transitionend", done);
-        });
-      });
-    }
-  });
-});
-
-// Scroll animations
-const animTargets = [
-  ...document.querySelectorAll(".section-heading"),
-  ...document.querySelectorAll(".service-card"),
-  ...document.querySelectorAll(".why-card"),
-  ...document.querySelectorAll(".project-card"),
-  ...document.querySelectorAll(".faq-item"),
-  ...document.querySelectorAll(".about-card"),
-  ...document.querySelectorAll(".about-visual"),
-  ...document.querySelectorAll(".contact-card"),
-  ...document.querySelectorAll(".contact-form"),
-  ...document.querySelectorAll(".services-addon"),
-  ...document.querySelectorAll(".services-group__header"),
-];
-
-document
-  .querySelectorAll(
-    ".services-grid, .why-grid, .projects-grid, .faq-list, .services-addon__grid"
-  )
-  .forEach((container) => {
-    Array.from(container.children).forEach((child, i) => {
-      child.style.transitionDelay = `${i * 0.09}s`;
-    });
-  });
-
-animTargets.forEach((el) => el.classList.add("animate-fade-up"));
-
-const scrollObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        scrollObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-);
-
-animTargets.forEach((el) => scrollObserver.observe(el));
-
-// Load marquee images after page load to avoid competing with hero download
+// Deferred marquee image loading (must register before window.load fires)
 window.addEventListener('load', () => {
   document.querySelectorAll('.projects-marquee__group:not([aria-hidden]) img[data-src]')
     .forEach(img => {
@@ -642,14 +447,175 @@ window.addEventListener('load', () => {
     });
 });
 
-// Start marquee after first paint
+// ─── Deferred heavy work (runs after first paint, while overlay is still up) ─
+
 requestAnimationFrame(() => {
+
+  // ── Language / translations ────────────────────────────────────────────────
+  const translatableElements = document.querySelectorAll("[data-i18n]");
+  const placeholderElements = document.querySelectorAll("[data-placeholder]");
+
+  const setLanguage = (lang) => {
+    const dictionary = translations[lang];
+    if (!dictionary) return;
+    document.documentElement.lang = lang;
+    translatableElements.forEach(el => {
+      const key = el.dataset.i18n;
+      if (dictionary[key]) el.textContent = dictionary[key];
+    });
+    placeholderElements.forEach(el => {
+      const key = el.dataset.placeholder;
+      if (dictionary[key]) el.placeholder = dictionary[key];
+    });
+    langButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.lang === lang));
+    localStorage.setItem("ginda-language", lang);
+  };
+
+  // Apply translations: skip the 105-element DOM loop for default German
+  // (HTML already has DE text; only run for non-default languages)
+  if (savedLanguage !== "de") {
+    setLanguage(savedLanguage);
+  } else {
+    // Just set DE placeholders (form inputs have no default placeholder in HTML)
+    const deDict = translations["de"];
+    placeholderElements.forEach(el => {
+      const key = el.dataset.placeholder;
+      if (deDict[key]) el.placeholder = deDict[key];
+    });
+  }
+
+  langButtons.forEach(btn => {
+    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+  });
+
+  // ── Project thumbnails ─────────────────────────────────────────────────────
+  document.querySelectorAll(".project-thumbs").forEach(group => {
+    const thumbs = group.querySelectorAll(".thumb");
+    const mainImage = group.closest(".project-card").querySelector(".project-main-image");
+    thumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        if (thumb.dataset.image && mainImage) mainImage.src = thumb.dataset.image;
+        thumbs.forEach(t => t.classList.remove("active"));
+        thumb.classList.add("active");
+      });
+    });
+  });
+
+  // ── Lightbox ───────────────────────────────────────────────────────────────
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  const openLightbox = (src, alt = "") => {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = src;
+    lightboxImage.alt = alt;
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+  const closeLightbox = () => {
+    if (!lightbox || !lightboxImage) return;
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+    document.body.style.overflow = "";
+  };
+
+  document.querySelectorAll(".project-main-image").forEach(img => {
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+  if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+  if (lightbox) lightbox.addEventListener("click", e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbox(); });
+
+  // ── FAQ accordion ──────────────────────────────────────────────────────────
+  document.querySelectorAll(".faq-item").forEach(details => {
+    const summary = details.querySelector(".faq-question");
+    const answer = details.querySelector(".faq-answer");
+    summary.addEventListener("click", e => {
+      e.preventDefault();
+      if (details.open) {
+        const cs = window.getComputedStyle(answer);
+        const pt = parseFloat(cs.paddingTop), pb = parseFloat(cs.paddingBottom);
+        answer.style.height = answer.offsetHeight + "px";
+        answer.style.paddingTop = pt + "px";
+        answer.style.paddingBottom = pb + "px";
+        requestAnimationFrame(() => {
+          answer.style.height = "0";
+          answer.style.paddingTop = "0";
+          answer.style.paddingBottom = "0";
+          const done = ev => {
+            if (ev.propertyName !== "height") return;
+            answer.removeEventListener("transitionend", done);
+            details.removeAttribute("open");
+            answer.style.cssText = "";
+          };
+          answer.addEventListener("transitionend", done);
+        });
+      } else {
+        details.setAttribute("open", "");
+        const cs = window.getComputedStyle(answer);
+        const pt = parseFloat(cs.paddingTop), pb = parseFloat(cs.paddingBottom);
+        answer.style.paddingTop = "0";
+        answer.style.paddingBottom = "0";
+        answer.style.height = "0";
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            answer.style.height = answer.scrollHeight + pt + pb + "px";
+            answer.style.paddingTop = pt + "px";
+            answer.style.paddingBottom = pb + "px";
+            const done = ev => {
+              if (ev.propertyName !== "height") return;
+              answer.removeEventListener("transitionend", done);
+              answer.style.cssText = "";
+            };
+            answer.addEventListener("transitionend", done);
+          });
+        });
+      }
+    });
+  });
+
+  // ── Scroll animations ──────────────────────────────────────────────────────
+  const animTargets = [
+    ...document.querySelectorAll(".section-heading"),
+    ...document.querySelectorAll(".service-card"),
+    ...document.querySelectorAll(".why-card"),
+    ...document.querySelectorAll(".project-card"),
+    ...document.querySelectorAll(".faq-item"),
+    ...document.querySelectorAll(".about-card"),
+    ...document.querySelectorAll(".about-visual"),
+    ...document.querySelectorAll(".contact-card"),
+    ...document.querySelectorAll(".contact-form"),
+    ...document.querySelectorAll(".services-addon"),
+    ...document.querySelectorAll(".services-group__header"),
+  ];
+  document.querySelectorAll(".services-grid, .why-grid, .projects-grid, .faq-list, .services-addon__grid")
+    .forEach(container => {
+      Array.from(container.children).forEach((child, i) => {
+        child.style.transitionDelay = `${i * 0.09}s`;
+      });
+    });
+  animTargets.forEach(el => el.classList.add("animate-fade-up"));
+  const scrollObserver = new IntersectionObserver(
+    entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add("is-visible"); scrollObserver.unobserve(entry.target); }
+    }),
+    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+  );
+  animTargets.forEach(el => scrollObserver.observe(el));
+
+  // ── Marquee start ──────────────────────────────────────────────────────────
   requestAnimationFrame(() => {
     document.querySelectorAll(".projects-marquee__track, .reviews-marquee__track")
       .forEach(el => el.classList.add("is-running"));
   });
-});
 
+}); // end rAF
+
+// ─── Form submit (independent) ──────────────────────────────────────────────
 
 const form = document.getElementById("contact-form");
 
