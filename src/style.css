@@ -1849,7 +1849,6 @@ html {
 
 .footer-cta-btn {
   display: inline-block;
-  margin-bottom: 16px;
   font-size: 0.9rem;
   padding: 11px 22px;
 }
@@ -1863,6 +1862,10 @@ html {
   color: #25d366;
   text-decoration: none;
   transition: opacity 0.18s;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 14px;
+  width: 100%;
 }
 
 .footer-wa-link:hover {
