@@ -132,6 +132,11 @@ const translations = {
     baProject1: "Gelbes Wohnhaus",
     baProject2: "Große Hausfassade",
     baProject3: "Wohnungsfassade",
+
+    footerNavLabel: "Seiten",
+    footerCtaLabel: "Offerte anfragen",
+    footerCtaText: "Kostenlose Beratung, unverbindliches Angebot.",
+    footerRights: "Alle Rechte vorbehalten",
   },
 
   es: {
@@ -262,6 +267,11 @@ const translations = {
     baProject1: "Casa Amarilla",
     baProject2: "Fachada Casa Grande",
     baProject3: "Fachada Piso",
+
+    footerNavLabel: "Páginas",
+    footerCtaLabel: "Solicitar presupuesto",
+    footerCtaText: "Consulta gratuita, presupuesto sin compromiso.",
+    footerRights: "Todos los derechos reservados",
   },
 
   en: {
@@ -393,6 +403,11 @@ const translations = {
     baProject1: "Yellow House",
     baProject2: "Large House Facade",
     baProject3: "Apartment Facade",
+
+    footerNavLabel: "Pages",
+    footerCtaLabel: "Request a quote",
+    footerCtaText: "Free consultation, no-obligation quote.",
+    footerRights: "All rights reserved",
   },
 };
 
