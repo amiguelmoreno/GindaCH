@@ -25,7 +25,6 @@
       imagesrcset="/coche-petrica-520.webp 520w, /coche-petrica.webp 700w"
       imagesizes="(min-width: 768px) 520px, 700px"
       fetchpriority="high" />
-    <link rel="preload" as="image" href="/logo-ginda.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
@@ -113,9 +112,7 @@
         align-items: center;
         justify-content: center;
         background: linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
-        animation: intro-hide 0.15s ease-in 0s forwards;
       }
-      @keyframes intro-hide { to { transform: translateY(-100%); } }
       .intro-overlay__logo {
         width: min(380px, 62vw);
         height: auto;
@@ -132,7 +129,7 @@
           class="intro-overlay__logo"
           width="500"
           height="484"
-          fetchpriority="high"
+          fetchpriority="low"
         />
       </div>
     </div>
