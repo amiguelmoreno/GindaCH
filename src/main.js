@@ -452,14 +452,7 @@ langButtons.forEach((button) => {
 });
 
 const savedLanguage = localStorage.getItem("ginda-language") || "de";
-// HTML is already in German — skip the 100+ DOM writes for the default language.
-// Only update textContent when switching away from the default.
-if (savedLanguage !== "de") {
-  setLanguage(savedLanguage);
-} else {
-  document.documentElement.lang = "de";
-  langButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.lang === "de"));
-}
+setLanguage(savedLanguage);
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
@@ -474,10 +467,6 @@ if (menuToggle && nav) {
     });
   });
 }
-
-// Defer below-fold interactive setup to a separate task — keeps the initial
-// long task short enough to avoid TBT contribution.
-setTimeout(() => {
 
 const thumbGroups = document.querySelectorAll(".project-thumbs");
 
@@ -751,4 +740,3 @@ document.querySelectorAll(".ba-slider").forEach((slider) => {
   }, { threshold: 0.1 }).observe(slider);
 });
 
-}, 0); // end of deferred below-fold setup
