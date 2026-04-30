@@ -1043,7 +1043,10 @@ section {
       transparent 34%
     ),
     linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
-  display: none;
+  animation: intro-hide 0.15s ease-in 0s forwards;
+}
+@keyframes intro-hide {
+  to { transform: translateY(-100%); }
 }
 
 
