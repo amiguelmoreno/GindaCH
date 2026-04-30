@@ -618,6 +618,15 @@ const scrollObserver = new IntersectionObserver(
 
 animTargets.forEach((el) => scrollObserver.observe(el));
 
+// Load marquee images after page load to avoid competing with hero download
+window.addEventListener('load', () => {
+  document.querySelectorAll('.projects-marquee__group:not([aria-hidden]) img[data-src]')
+    .forEach(img => {
+      if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+      img.src = img.dataset.src;
+    });
+});
+
 // Start marquee after first paint
 requestAnimationFrame(() => {
   requestAnimationFrame(() => {
