@@ -1048,6 +1048,9 @@ section {
 @keyframes intro-hide {
   to { transform: translateY(-100%); }
 }
+@media (max-width: 767px) {
+  .intro-overlay { display: none; }
+}
 
 
 .intro-overlay__inner {
