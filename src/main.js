@@ -631,7 +631,11 @@ const scrollObserver = new IntersectionObserver(
   { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
 );
 
-animTargets.forEach((el) => scrollObserver.observe(el));
+// Defer observe() calls to break the forced-reflow caused by reading
+// intersection state immediately after DOM writes (classList + transitionDelay).
+requestAnimationFrame(() => {
+  animTargets.forEach((el) => scrollObserver.observe(el));
+});
 
 // Load marquee images after page load to avoid competing with hero download
 window.addEventListener('load', () => {
