@@ -626,11 +626,6 @@ requestAnimationFrame(() => {
   });
 });
 
-const introOverlay = document.getElementById("introOverlay");
-
-if (introOverlay) {
-  introOverlay.addEventListener("animationend", () => {}, { once: true });
-}
 
 const form = document.getElementById("contact-form");
 
