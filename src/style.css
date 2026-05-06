@@ -401,8 +401,14 @@ section {
   gap: 40px;
 }
 
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-image img {
   width: 100%;
+  max-width: 420px;
 
   height: auto;
 
