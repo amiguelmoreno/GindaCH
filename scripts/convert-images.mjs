@@ -8,9 +8,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, "../public");
 
 const JOBS = [
-  // Hero LCP image – 700w for mobile, 520w for desktop (served via <picture> media query)
-  { src: "coche-petrica.png", width: 700, quality: 40 },
-  { src: "coche-petrica.png", out: "coche-petrica-520.webp", width: 520, quality: 40 },
+  // Hero LCP image – displayed 700px mobile / 520px desktop, served @2x retina via <picture> media query
+  { src: "coche-petrica.png", width: 1400, quality: 72 },
+  { src: "coche-petrica.png", out: "coche-petrica-520.webp", width: 1040, quality: 72 },
   // About image
   { src: "petrica.png", width: 520, quality: 82 },
   // Logo (used in header brand + intro overlay)
