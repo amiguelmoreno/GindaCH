@@ -173,7 +173,7 @@ section {
 .lang-btn svg {
   width: 24px;
   height: 16px;
-  border-radius: 3px;
+  border-radius: 6px;
   display: block;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
   opacity: 0.5;

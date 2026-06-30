@@ -64,8 +64,6 @@ const translations = {
 
     projectsEyebrow: "Projekte",
     projectsTitle: "Einblick in unsere Arbeiten",
-    projectsText:
-      "Hier kannst du später echte Fotos pro Projekt einfügen. Bis dahin sind Beispielbilder eingebaut.",
     project1Title: "Wohnung Innenanstrich",
     project1Text:
       "Beispielprojekt für Wände und Decken mit modernem, sauberem Finish.",
@@ -201,8 +199,6 @@ const translations = {
 
     projectsEyebrow: "Proyectos",
     projectsTitle: "Una muestra de nuestros trabajos",
-    projectsText:
-      "Aquí podrás añadir fotos reales de cada proyecto más adelante. De momento hay imágenes de ejemplo.",
     project1Title: "Pintura interior de vivienda",
     project1Text:
       "Proyecto de ejemplo para paredes y techos con acabado moderno y limpio.",
@@ -337,8 +333,6 @@ const translations = {
 
     projectsEyebrow: "Projects",
     projectsTitle: "A look at our work",
-    projectsText:
-      "Here you can later add real photos for each project. For now, sample images are included.",
     project1Title: "Residential interior painting",
     project1Text:
       "Sample project for walls and ceilings with a modern and clean finish.",
