@@ -1936,3 +1936,95 @@ html {
     text-align: center;
   }
 }
+
+/* ===== Mieterwechsel Komplettservice ===== */
+.mieterwechsel__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 56px 40px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #241f9c 0%, var(--color-primary) 55%, #3b34c9 100%);
+  box-shadow: var(--shadow-strong);
+}
+
+.mieterwechsel__badge {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  background: var(--color-accent);
+  margin-bottom: 18px;
+}
+
+.mieterwechsel__head h2 {
+  color: #fff;
+  margin: 0 auto 14px;
+  max-width: 16ch;
+}
+
+.mieterwechsel__head p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+.mieterwechsel__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.mw-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  padding: 28px 20px;
+}
+
+.mw-item__icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.mw-item h3 {
+  color: #fff;
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.mw-item p {
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.btn-mw {
+  color: var(--color-primary-dark);
+  background: var(--color-accent);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+.btn-mw:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+@media (max-width: 720px) {
+  .mieterwechsel__card {
+    padding: 40px 22px;
+    border-radius: 22px;
+  }
+
+  .mieterwechsel__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 28px 0;
+  }
+}

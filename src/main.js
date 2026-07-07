@@ -4,6 +4,7 @@ const translations = {
   de: {
     brandTagline: "Malerarbeiten mit Sorgfalt",
     navServices: "Leistungen",
+    navMieterwechsel: "Mieterwechsel",
     navWhy: "Warum wir",
     navProjects: "Projekte",
     navReviews: "Bewertungen",
@@ -46,6 +47,17 @@ const translations = {
     service7Text:
       "Ausgleich, Verputz und professionelle Vorbereitung von Wänden und Decken für ein optimales Malerendresultat.",
 
+    mwBadge: "Mieterwechsel",
+    mwTitle: "Unser Komplettservice für den Mieterwechsel",
+    mwText:
+      "Wohnung streichen, ausbessern und reinigen – alles aus einer Hand, termingerecht und bezugsbereit übergeben.",
+    mwItem1Title: "Malen",
+    mwItem1Text: "Wände, Decken und Türen sauber gestrichen.",
+    mwItem2Title: "Gipsreparaturen",
+    mwItem2Text: "Löcher und Risse sauber ausgebessert.",
+    mwItem3Title: "Endreinigung",
+    mwItem3Text: "Alles bezugsbereit übergeben.",
+    mwCta: "Kostenlose Offerte",
     whyEyebrow: "Warum Ginda",
     whyTitle: "Zuverlässigkeit, Erfahrung und Liebe zum Detail",
     whyText:
@@ -140,6 +152,7 @@ const translations = {
   es: {
     brandTagline: "Pintura con cuidado y precisión",
     navServices: "Servicios",
+    navMieterwechsel: "Cambio de inquilino",
     navWhy: "Por qué elegirnos",
     navProjects: "Proyectos",
     navReviews: "Opiniones",
@@ -182,6 +195,17 @@ const translations = {
     service7Text:
       "Nivelado, enlucido y preparación profesional de paredes y techos para un acabado de pintura óptimo.",
 
+    mwBadge: "Cambio de inquilino",
+    mwTitle: "Nuestro servicio completo para el cambio de inquilino",
+    mwText:
+      "Pintar, reparar y limpiar la vivienda: todo de la mano de un solo equipo, a tiempo y lista para entregar.",
+    mwItem1Title: "Pintura",
+    mwItem1Text: "Paredes, techos y puertas pintados con limpieza.",
+    mwItem2Title: "Reparación de yeso",
+    mwItem2Text: "Agujeros y grietas reparados con esmero.",
+    mwItem3Title: "Limpieza final",
+    mwItem3Text: "Todo entregado listo para entrar a vivir.",
+    mwCta: "Presupuesto gratuito",
     whyEyebrow: "Por qué Ginda",
     whyTitle: "Fiabilidad, experiencia y atención al detalle",
     whyText:
@@ -273,6 +297,7 @@ const translations = {
   en: {
     brandTagline: "Painting with care and precision",
     navServices: "Services",
+    navMieterwechsel: "Tenant change",
     navWhy: "Why us",
     navProjects: "Projects",
     navReviews: "Reviews",
@@ -315,6 +340,17 @@ const translations = {
     service7Text:
       "Levelling, plastering and professional preparation of walls and ceilings for an optimal painting result.",
 
+    mwBadge: "Tenant change",
+    mwTitle: "Our complete service for tenant changeover",
+    mwText:
+      "Painting, repairs and cleaning of the flat – all from one team, on time and handed over ready to move in.",
+    mwItem1Title: "Painting",
+    mwItem1Text: "Walls, ceilings and doors cleanly painted.",
+    mwItem2Title: "Plaster repairs",
+    mwItem2Text: "Holes and cracks neatly patched up.",
+    mwItem3Title: "Final cleaning",
+    mwItem3Text: "Everything handed over ready to move in.",
+    mwCta: "Free quote",
     whyEyebrow: "Why Ginda",
     whyTitle: "Reliability, experience and attention to detail",
     whyText:
