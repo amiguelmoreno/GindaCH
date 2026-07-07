@@ -1951,7 +1951,23 @@ html {
 }
 
 .mw-panel__head {
+  max-width: none;
   margin-bottom: 32px;
+}
+
+.mw-panel__head p {
+  max-width: 62ch;
+}
+
+.btn-accent {
+  color: var(--color-primary-dark);
+  background: var(--color-accent);
+  box-shadow: 0 12px 26px rgba(255, 213, 74, 0.35);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
 }
 
 .mw-panel__grid {
