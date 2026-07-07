@@ -47,7 +47,7 @@ const translations = {
     service7Text:
       "Ausgleich, Verputz und professionelle Vorbereitung von Wänden und Decken für ein optimales Malerendresultat.",
 
-    mwBadge: "Mieterwechsel",
+    mwBadge: "Komplettservice",
     mwTitle: "Unser Komplettservice für den Mieterwechsel",
     mwText:
       "Wohnung streichen, ausbessern und reinigen – alles aus einer Hand, termingerecht und bezugsbereit übergeben.",
@@ -195,7 +195,7 @@ const translations = {
     service7Text:
       "Nivelado, enlucido y preparación profesional de paredes y techos para un acabado de pintura óptimo.",
 
-    mwBadge: "Cambio de inquilino",
+    mwBadge: "Servicio completo",
     mwTitle: "Nuestro servicio completo para el cambio de inquilino",
     mwText:
       "Pintar, reparar y limpiar la vivienda: todo de la mano de un solo equipo, a tiempo y lista para entregar.",
@@ -340,7 +340,7 @@ const translations = {
     service7Text:
       "Levelling, plastering and professional preparation of walls and ceilings for an optimal painting result.",
 
-    mwBadge: "Tenant change",
+    mwBadge: "Complete service",
     mwTitle: "Our complete service for tenant changeover",
     mwText:
       "Painting, repairs and cleaning of the flat – all from one team, on time and handed over ready to move in.",
