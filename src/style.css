@@ -246,6 +246,36 @@ section {
   border-bottom: none;
 }
 
+.nav-quick {
+  display: none;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-quick a {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-quick .btn-nav {
+  border-radius: 12px;
+}
+
+@media (min-width: 900px) {
+  .nav-quick {
+    display: flex;
+  }
+
+  .nav .nav-dup {
+    display: none;
+  }
+
+  .nav a[href="#faq"] {
+    border-bottom: none;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
