@@ -277,6 +277,9 @@
               <a href="#projects" class="btn btn-secondary">
                 Projekte ansehen
               </a>
+              <a href="#ablauf" class="btn btn-secondary" data-i18n="heroVideoCta">
+                ▶ Video ansehen
+              </a>
             </div>
 
             <ul class="hero-points">
@@ -301,6 +304,36 @@
                 decoding="async"
               />
             </picture>
+          </div>
+        </div>
+      </section>
+
+      <section id="ablauf" class="section section-alt video-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="videoEyebrow">So arbeiten wir</p>
+            <h2 data-i18n="videoTitle">Von der Anfrage bis zur Übergabe</h2>
+            <p data-i18n="videoText">
+              In einer Minute sehen Sie, wie ein Auftrag mit Ginda abläuft:
+              einfach, sauber und transparent.
+            </p>
+          </div>
+
+          <div class="video-frame">
+            <video
+              id="trailerVideo"
+              controls
+              preload="none"
+              playsinline
+              poster="/videos/ginda-trailer-poster-de.jpg"
+              aria-label="So arbeiten wir: Video von Ginda"
+              data-lang="de"
+            >
+              <source src="/videos/ginda-trailer-de-web.mp4" type="video/mp4" />
+            </video>
+            <button class="video-play" id="trailerPlay" type="button" aria-label="Video abspielen">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" /></svg>
+            </button>
           </div>
         </div>
       </section>

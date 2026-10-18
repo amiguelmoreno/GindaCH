@@ -17,6 +17,7 @@ const translations = {
       "Saubere Arbeit, präzise Ausführung und persönliche Betreuung für Wohnungen, Häuser, Büros und Geschäftsräume.",
     heroCta1: "Offerte anfragen",
     heroCta2: "Projekte ansehen",
+    heroVideoCta: "▶ Video ansehen",
     heroPoint1: "19 Jahre Erfahrung",
     heroPoint2: "Innen, Außen, Dekoration und Restaurierung",
     heroPoint3: "Einsatzgebiet: Luzern, Zürich, Zug und Aargau",
@@ -25,6 +26,12 @@ const translations = {
     servicesTitle: "Was wir für Sie übernehmen",
     servicesText:
       "Professionelle Lösungen für Wohnräume, Fassaden, Büros und gewerbliche Objekte.",
+    videoEyebrow: "So arbeiten wir",
+    videoTitle: "Von der Anfrage bis zur Übergabe",
+    videoText:
+      "In einer Minute sehen Sie, wie ein Auftrag mit Ginda abläuft: einfach, sauber und transparent.",
+    videoLabel: "So arbeiten wir: Video von Ginda",
+    videoPlay: "Video abspielen",
     service1Title: "Innenanstrich",
     service1Text:
       "Wände, Decken, Türen, Fenster und Innenräume mit sauberem und langlebigem Finish.",
@@ -165,6 +172,7 @@ const translations = {
       "Trabajo limpio, ejecución precisa y atención cercana para viviendas, casas, oficinas y espacios comerciales.",
     heroCta1: "Solicitar presupuesto",
     heroCta2: "Ver proyectos",
+    heroVideoCta: "▶ Ver vídeo",
     heroPoint1: "19 años de experiencia",
     heroPoint2: "Interior, exterior, decoración y restauración",
     heroPoint3: "Zona de trabajo: Lucerna, Zúrich, Zug y Argovia",
@@ -173,6 +181,12 @@ const translations = {
     servicesTitle: "Qué podemos hacer por ti",
     servicesText:
       "Soluciones profesionales para viviendas, fachadas, oficinas y espacios comerciales.",
+    videoEyebrow: "Así trabajamos",
+    videoTitle: "Desde tu mensaje hasta la entrega",
+    videoText:
+      "En un minuto ves cómo es un encargo con Ginda: sencillo, limpio y transparente.",
+    videoLabel: "Así trabajamos: vídeo de Ginda",
+    videoPlay: "Reproducir vídeo",
     service1Title: "Pintura de interiores",
     service1Text:
       "Paredes, techos, puertas, ventanas y espacios interiores con acabados limpios y duraderos.",
@@ -310,6 +324,7 @@ const translations = {
       "Clean work, precise execution and personal attention for homes, houses, offices and commercial spaces.",
     heroCta1: "Request a quote",
     heroCta2: "View projects",
+    heroVideoCta: "▶ Watch video",
     heroPoint1: "19 years of experience",
     heroPoint2: "Interior, exterior, decoration and restoration",
     heroPoint3: "Service area: Lucerne, Zurich, Zug and Aargau",
@@ -318,6 +333,12 @@ const translations = {
     servicesTitle: "What we can do for you",
     servicesText:
       "Professional solutions for homes, facades, offices and commercial properties.",
+    videoEyebrow: "How we work",
+    videoTitle: "From your first message to the handover",
+    videoText:
+      "In one minute, see how a job with Ginda works: simple, clean and transparent.",
+    videoLabel: "How we work: a video by Ginda",
+    videoPlay: "Play video",
     service1Title: "Interior painting",
     service1Text:
       "Walls, ceilings, doors, windows and indoor spaces with clean and durable finishes.",
@@ -448,6 +469,32 @@ const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav a");
 
+// El vídeo "So arbeiten wir" existe en los tres idiomas: al cambiar de idioma se
+// cambian el vídeo y su portada. Con preload="none" no se descarga hasta pulsar play.
+const trailerVideo = document.getElementById("trailerVideo");
+const trailerPlay = document.getElementById("trailerPlay");
+const trailerFrame = trailerVideo?.closest(".video-frame");
+
+// Botón grande de play encima de la portada; se oculta mientras el vídeo suena.
+if (trailerVideo && trailerPlay) {
+  trailerPlay.addEventListener("click", () => trailerVideo.play());
+  trailerVideo.addEventListener("play", () => trailerFrame.classList.add("is-playing"));
+  trailerVideo.addEventListener("ended", () => trailerFrame.classList.remove("is-playing"));
+}
+
+const setTrailerLanguage = (lang, dictionary) => {
+  if (!trailerVideo || trailerVideo.dataset.lang === lang) return;
+  const source = trailerVideo.querySelector("source");
+  trailerVideo.pause();
+  trailerVideo.poster = `/videos/ginda-trailer-poster-${lang}.jpg`;
+  source.src = `/videos/ginda-trailer-${lang}-web.mp4`;
+  if (dictionary.videoLabel) trailerVideo.setAttribute("aria-label", dictionary.videoLabel);
+  if (trailerPlay && dictionary.videoPlay) trailerPlay.setAttribute("aria-label", dictionary.videoPlay);
+  trailerVideo.dataset.lang = lang;
+  trailerVideo.load();
+  trailerFrame?.classList.remove("is-playing");
+};
+
 const setLanguage = (lang) => {
   const dictionary = translations[lang];
   if (!dictionary) return;
@@ -471,6 +518,8 @@ const setLanguage = (lang) => {
   langButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
+
+  setTrailerLanguage(lang, dictionary);
 
   localStorage.setItem("ginda-language", lang);
 };
