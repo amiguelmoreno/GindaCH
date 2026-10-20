@@ -486,8 +486,8 @@ const setTrailerLanguage = (lang, dictionary) => {
   if (!trailerVideo || trailerVideo.dataset.lang === lang) return;
   const source = trailerVideo.querySelector("source");
   trailerVideo.pause();
-  trailerVideo.poster = `/videos/ginda-trailer-poster-${lang}.jpg`;
-  source.src = `/videos/ginda-trailer-${lang}-web.mp4`;
+  trailerVideo.poster = `/videos/ginda-trailer-poster-${lang}.jpg?v=2`;
+  source.src = `/videos/ginda-trailer-${lang}-web.mp4?v=2`;
   if (dictionary.videoLabel) trailerVideo.setAttribute("aria-label", dictionary.videoLabel);
   if (trailerPlay && dictionary.videoPlay) trailerPlay.setAttribute("aria-label", dictionary.videoPlay);
   trailerVideo.dataset.lang = lang;
